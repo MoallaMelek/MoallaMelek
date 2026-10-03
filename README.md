@@ -104,6 +104,7 @@ I care about systems that are technically credible *and* actually usable: clean 
 
 ## What I Am Building Next
 
+- Currently improving [Reward Goblin](https://github.com/MoallaMelek/Reward-Goblin), my reinforcement-learning playground for exploring reward hacking with real PPO agents and separate task-success evaluation
 - Smarter RAG-driven experiences with strong retrieval quality and practical UX
 - AI-first full-stack applications where backend intelligence directly shapes the interface
 - Real-time computer vision and streaming systems that run reliably outside the notebook
