@@ -1,13 +1,14 @@
 <div align="center">
 
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:0D1117,35:111827,70:1F2937,100:2563EB&text=Melek%20Moalla&fontColor=E6EDF3&fontSize=42&fontAlignY=35&desc=AI%20Engineer%20%7C%20Full-Stack%20AI%20Developer%20%7C%20Building%20Intelligent%20Products&descAlignY=57&descAlign=50" alt="Melek Moalla — AI Engineer" />
+<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=170&color=0:0D1117,35:111827,70:1F2937,100:2563EB&text=Melek%20Moalla&fontColor=E6EDF3&fontSize=42&fontAlignY=35&desc=AI%20Engineering%20Student%20%7C%20Full-Stack%20AI%20Developer%20%7C%20Building%20Intelligent%20Products&descAlignY=57&descAlign=50" alt="Melek Moalla — AI Engineering Student" />
 
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=920&lines=Designing+production-grade+AI+systems;Deep+learning+%2B+FastAPI+%2B+React+%2B+Flutter;Computer+vision%2C+RAG+and+NLP+applications;Real-time+systems+with+research-minded+execution)](https://github.com/MoallaMelek)
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://melek-moalla.vercel.app)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Melek%20Moalla-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/melek-moalla-14a5a4357)
 [![Profile Views](https://komarev.com/ghpvc/?username=MoallaMelek&style=for-the-badge&color=2563EB&label=PROFILE%20VIEWS&v=20261004)](https://github.com/MoallaMelek)
 [![GitHub followers](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
-[![AI Engineer](https://img.shields.io/badge/Role-AI%20Engineer-2563EB?style=for-the-badge)](#about-me)
+[![AI Engineering Student](https://img.shields.io/badge/Role-AI%20Engineering%20Student-2563EB?style=for-the-badge)](#about-me)
 [![Full-Stack AI Developer](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
 
 </div>
@@ -15,6 +16,8 @@
 ---
 
 ## About Me
+
+I am **Melek Moalla**, an **AI engineering student at ESPRIT in Tunisia**, building projects in machine learning, deep learning, computer vision, reinforcement learning, and software engineering.
 
 I build intelligent software systems that connect **machine learning**, **backend engineering**, and **product-facing interfaces** into one coherent experience.
 
