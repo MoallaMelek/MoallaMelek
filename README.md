@@ -5,7 +5,7 @@
 [![Typing SVG](https://readme-typing-svg.demolab.com?font=Space+Grotesk&weight=600&size=24&pause=1200&color=58A6FF&center=true&vCenter=true&width=920&lines=Designing+production-grade+AI+systems;Deep+learning+%2B+FastAPI+%2B+React+%2B+Flutter;Computer+vision%2C+RAG+and+NLP+applications;Real-time+systems+with+research-minded+execution)](https://github.com/MoallaMelek)
 
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://melek-moalla.vercel.app)
-[![Profile Views](https://komarev.com/ghpvc/?username=MoallaMelek&style=for-the-badge&color=2563EB&label=PROFILE+VIEWS)](https://github.com/MoallaMelek)
+[![Profile Views](https://komarev.com/ghpvc/?username=MoallaMelek&style=for-the-badge&color=2563EB&label=PROFILE%20VIEWS&v=20261004)](https://github.com/MoallaMelek)
 [![GitHub followers](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
 [![AI Engineer](https://img.shields.io/badge/Role-AI%20Engineer-2563EB?style=for-the-badge)](#about-me)
 [![Full-Stack AI Developer](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
