@@ -9,6 +9,7 @@ on:
     paths:
       - README.md
       - scripts/generate_cards.py
+      - scripts/refresh_profile_views.py
       - .github/workflows/cards.yml
 
 permissions:
@@ -27,6 +28,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Refresh profile views snapshot
+        env:
+          GH_USER: ${{ github.repository_owner }}
+        run: python scripts/refresh_profile_views.py
 
       - name: Generate SVG cards
         env:

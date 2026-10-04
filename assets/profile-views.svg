@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="157" height="28" role="img" aria-label="PROFILE VIEWS: 108">
+  <title>PROFILE VIEWS: 108</title>
+  <g shape-rendering="crispEdges">
+    <rect width="113" height="28" fill="#555"/>
+    <rect x="113" width="44" height="28" fill="#2563EB"/>
+  </g>
+  <g fill="#fff" text-anchor="middle" font-family="Verdana,Geneva,DejaVu Sans,sans-serif" font-size="10" letter-spacing="1.1">
+    <text x="56.5" y="17.5">PROFILE VIEWS</text>
+    <text x="135" y="17.5" font-weight="bold">108</text>
+  </g>
+</svg>
