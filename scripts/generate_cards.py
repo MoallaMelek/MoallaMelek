@@ -6,8 +6,10 @@ using only the standard library.
 """
 
 import datetime as dt
+import hashlib
 import json
 import os
+import re
 import textwrap
 import urllib.request
 from html import escape
@@ -232,6 +234,18 @@ def activity_card(days):
     return frame(w, h, body, "Contribution Activity")
 
 
+def refresh_card_links():
+    """Change image URLs only when their generated contents change."""
+    readme = OUT.parent / "README.md"
+    content = readme.read_text(encoding="utf-8")
+    def version(match):
+        path = match.group(1)
+        digest = hashlib.sha256((OUT.parent / path).read_bytes()).hexdigest()[:12]
+        return f"{path}?v={digest}"
+    content = re.sub(r"(assets/(?:stats|top-langs|activity)\.svg)(?:\?v=[A-Za-z0-9_-]+)?", version, content)
+    readme.write_text(content, encoding="utf-8")
+
+
 def main():
     if not TOKEN:
         raise SystemExit("Set GH_TOKEN or GITHUB_TOKEN")
@@ -279,6 +293,7 @@ def main():
     for name in PINNED:
         if name in by_name:
             (OUT / f"pin-{name}.svg").write_text(pin_card(by_name[name]), encoding="utf-8")
+    refresh_card_links()
     print(json.dumps(stats))
 
 

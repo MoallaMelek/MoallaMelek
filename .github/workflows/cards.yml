@@ -2,7 +2,7 @@ name: Update profile cards
 
 on:
   schedule:
-    - cron: "17 3 * * *" # daily
+    - cron: "17 * * * *" # hourly; GitHub may delay scheduled runs
   workflow_dispatch:
   push:
     branches: [master]
@@ -46,6 +46,6 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets
+          git add assets README.md
           git diff --cached --quiet || git commit -m "chore: refresh profile cards"
           git push

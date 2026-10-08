@@ -154,8 +154,8 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=20261002" alt="GitHub stats" />
-  <img height="180" src="assets/top-langs.svg?v=20261002" alt="Most used languages" />
+  <img height="180" src="assets/stats.svg?v=85f2298d40b7" alt="GitHub stats" />
+  <img height="180" src="assets/top-langs.svg?v=8190305d9da4" alt="Most used languages" />
 </div>
 
 <div align="center">
@@ -163,7 +163,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=20261002" alt="Contribution activity graph" />
+  <img width="100%" src="assets/activity.svg?v=f1dc3f97ab95" alt="Contribution activity graph" />
 </div>
 
 <sub>Stats, language and project cards, and the profile views badge are refreshed daily by a GitHub Action. The views badge keeps its last good value if the counter is unavailable.</sub>
