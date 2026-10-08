@@ -154,16 +154,16 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=88c58ebadf1b" alt="GitHub stats" />
-  <img height="180" src="assets/top-langs.svg?v=8190305d9da4" alt="Most used languages" />
+  <img height="180" src="assets/stats.svg?v=920b23a90b8d" alt="GitHub stats" />
+  <img height="180" src="assets/top-langs.svg?v=2b174cdc4eed" alt="Most used languages" />
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=88c58ebadf1b" alt="GitHub streak" />
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=920b23a90b8d" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=62eab2c4b103" alt="Contribution activity graph" />
+  <img width="100%" src="assets/activity.svg?v=b22b67357cf9" alt="Contribution activity graph" />
 </div>
 
 <sub>Stats, language and project cards, and the profile views badge are refreshed hourly by a GitHub Action. The views badge keeps its last good value if the counter is unavailable.</sub>
