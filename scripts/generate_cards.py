@@ -243,6 +243,8 @@ def refresh_card_links():
         digest = hashlib.sha256((OUT.parent / path).read_bytes()).hexdigest()[:12]
         return f"{path}?v={digest}"
     content = re.sub(r"(assets/(?:stats|top-langs|activity)\.svg)(?:\?v=[A-Za-z0-9_-]+)?", version, content)
+    stats_version = hashlib.sha256((OUT / "stats.svg").read_bytes()).hexdigest()[:12]
+    content = re.sub(r'(https://streak-stats\.demolab\.com[^"\s]*[&]v=)[A-Za-z0-9_-]+', lambda match: match.group(1) + stats_version, content)
     readme.write_text(content, encoding="utf-8")
 
 
