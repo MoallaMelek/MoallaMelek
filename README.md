@@ -91,6 +91,66 @@ I care about systems that are technically credible *and* actually usable: clean 
 
 ---
 
+<!-- certifications:start -->
+## Professional Learning & Certifications
+
+Five completed courses across **deep learning**, **generative AI**, **agentic AI**, and **AI solution architecture**. The learning complements the engineering projects above; each credential links to its issuer record and original certificate.
+
+<a href="https://learn.nvidia.com/certificates?id=nQezqvF2S3GIgeoy1hNHKw">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/certifications/nvidia-deep-learning-mobile.svg" />
+    <img width="100%" src="assets/certifications/nvidia-deep-learning.svg" alt="NVIDIA: Fundamentals of Deep Learning" />
+  </picture>
+</a>
+
+**NVIDIA · Fundamentals of Deep Learning**  
+[Issuer record](https://learn.nvidia.com/certificates?id=nQezqvF2S3GIgeoy1hNHKw) · [Original certificate PDF](certificates/nvidia-deep-learning.pdf)
+
+<a href="https://learn.nvidia.com/certificates?id=IkT2VY9-TWGR3EvSAaeFNA">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/certifications/nvidia-diffusion-mobile.svg" />
+    <img width="100%" src="assets/certifications/nvidia-diffusion.svg" alt="NVIDIA: Generative AI with Diffusion Models" />
+  </picture>
+</a>
+
+**NVIDIA · Generative AI with Diffusion Models**  
+[Issuer record](https://learn.nvidia.com/certificates?id=IkT2VY9-TWGR3EvSAaeFNA) · [Original certificate PDF](certificates/nvidia-diffusion.pdf)
+
+<a href="https://coursera.org/verify/DQZ61608JYWW">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/certifications/aws-agentic-mobile.svg" />
+    <img width="100%" src="assets/certifications/aws-agentic.svg" alt="Amazon Web Services: Gen AI Dev- Agentic AI Solutions and Tool Integrations" />
+  </picture>
+</a>
+
+**Amazon Web Services · Gen AI Dev- Agentic AI Solutions and Tool Integrations**  
+[Verify completion](https://coursera.org/verify/DQZ61608JYWW) · [Original certificate PDF](certificates/aws-agentic.pdf)
+
+<a href="https://coursera.org/verify/KN4I9UGNT0WZ">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/certifications/aws-genai-design-mobile.svg" />
+    <img width="100%" src="assets/certifications/aws-genai-design.svg" alt="Amazon Web Services: Gen AI Dev- Analyze Requirements &amp; Design GenAI Solutions" />
+  </picture>
+</a>
+
+**Amazon Web Services · Gen AI Dev- Analyze Requirements & Design GenAI Solutions**  
+[Verify completion](https://coursera.org/verify/KN4I9UGNT0WZ) · [Original certificate PDF](certificates/aws-genai-design.pdf)
+
+<a href="https://coursera.org/verify/3SRF1BKFHQ9M">
+  <picture>
+    <source media="(max-width: 600px)" srcset="assets/certifications/vanderbilt-agents-mobile.svg" />
+    <img width="100%" src="assets/certifications/vanderbilt-agents.svg" alt="Vanderbilt University: AI Agents and Agentic AI with Python &amp; Generative AI" />
+  </picture>
+</a>
+
+**Vanderbilt University · AI Agents and Agentic AI with Python & Generative AI**  
+[Verify completion](https://coursera.org/verify/3SRF1BKFHQ9M) · [Original certificate PDF](certificates/vanderbilt-agents.pdf)
+
+<sub>NVIDIA awards are Certificates of Competency; AWS and Vanderbilt awards are Coursera course completions.</sub>
+
+---
+<!-- certifications:end -->
+
 ## GitHub Analytics
 
 <div align="center">
@@ -131,3 +191,4 @@ I care about systems that are technically credible *and* actually usable: clean 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&color=0:0D1117,35:111827,70:1F2937,100:2563EB" alt="" />
 
 </div>
+
