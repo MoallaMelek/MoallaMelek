@@ -7,7 +7,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://melek-moalla.vercel.app)
 [![CV](https://img.shields.io/badge/CV-Download%20PDF-2563EB?style=for-the-badge)](https://melek-moalla.vercel.app/Melek-Moalla-CV.pdf)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Melek%20Moalla-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/melek-moalla-14a5a4357)
-[![Profile Views](assets/profile-views.svg)](https://github.com/MoallaMelek "Profile views — refreshed daily")
+[![Profile Views](assets/profile-views.svg)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
 [![GitHub followers](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
 [![AI Engineering Student](https://img.shields.io/badge/Role-AI%20Engineering%20Student-2563EB?style=for-the-badge)](#about-me)
 [![Full-Stack AI Developer](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
@@ -166,7 +166,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
   <img width="100%" src="assets/activity.svg?v=f4664c3451db" alt="Contribution activity graph" />
 </div>
 
-<sub>Stats, language and project cards, and the profile views badge are refreshed daily by a GitHub Action. The views badge keeps its last good value if the counter is unavailable.</sub>
+<sub>Stats, language and project cards, and the profile views badge are refreshed hourly by a GitHub Action. The views badge keeps its last good value if the counter is unavailable.</sub>
 
 ---
 
