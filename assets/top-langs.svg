@@ -11,21 +11,21 @@
 <rect x="0.5" y="0.5" rx="10" width="379" height="224" fill="#0D1117" stroke="#30363D"/>
 <text x="25" y="35" class="title">Most Used Languages</text>
 <clipPath id="bar"><rect x="25" y="55" width="330" height="8" rx="4"/></clipPath><g clip-path="url(#bar)">
-<rect x="25.00" y="55" width="122.85" height="8" fill="#3572A5"/>
-<rect x="147.35" y="55" width="50.48" height="8" fill="#f1e05a"/>
-<rect x="197.32" y="55" width="45.38" height="8" fill="#3178c6"/>
-<rect x="242.20" y="55" width="38.29" height="8" fill="#4F5D95"/>
-<rect x="279.99" y="55" width="34.53" height="8" fill="#e34c26"/>
-<rect x="314.02" y="55" width="33.75" height="8" fill="#663399"/>
-<rect x="347.26" y="55" width="6.09" height="8" fill="#00B4AB"/>
-<rect x="352.85" y="55" width="1.29" height="8" fill="#f34b7d"/>
+<rect x="25.00" y="55" width="123.57" height="8" fill="#3572A5"/>
+<rect x="148.07" y="55" width="50.19" height="8" fill="#f1e05a"/>
+<rect x="197.76" y="55" width="45.00" height="8" fill="#3178c6"/>
+<rect x="242.26" y="55" width="37.97" height="8" fill="#4F5D95"/>
+<rect x="279.74" y="55" width="34.56" height="8" fill="#e34c26"/>
+<rect x="313.80" y="55" width="34.02" height="8" fill="#663399"/>
+<rect x="347.31" y="55" width="6.04" height="8" fill="#00B4AB"/>
+<rect x="352.85" y="55" width="1.28" height="8" fill="#f34b7d"/>
 </g>
-<g class="fade" style="animation-delay:150ms"><circle cx="30" cy="86" r="5" fill="#3572A5"/><text x="41" y="90" class="label">Python <tspan class="muted">37.1%</tspan></text></g>
+<g class="fade" style="animation-delay:150ms"><circle cx="30" cy="86" r="5" fill="#3572A5"/><text x="41" y="90" class="label">Python <tspan class="muted">37.3%</tspan></text></g>
 <g class="fade" style="animation-delay:250ms"><circle cx="200" cy="86" r="5" fill="#f1e05a"/><text x="211" y="90" class="label">JavaScript <tspan class="muted">15.1%</tspan></text></g>
-<g class="fade" style="animation-delay:350ms"><circle cx="30" cy="116" r="5" fill="#3178c6"/><text x="41" y="120" class="label">TypeScript <tspan class="muted">13.6%</tspan></text></g>
-<g class="fade" style="animation-delay:450ms"><circle cx="200" cy="116" r="5" fill="#4F5D95"/><text x="211" y="120" class="label">PHP <tspan class="muted">11.5%</tspan></text></g>
+<g class="fade" style="animation-delay:350ms"><circle cx="30" cy="116" r="5" fill="#3178c6"/><text x="41" y="120" class="label">TypeScript <tspan class="muted">13.5%</tspan></text></g>
+<g class="fade" style="animation-delay:450ms"><circle cx="200" cy="116" r="5" fill="#4F5D95"/><text x="211" y="120" class="label">PHP <tspan class="muted">11.4%</tspan></text></g>
 <g class="fade" style="animation-delay:550ms"><circle cx="30" cy="146" r="5" fill="#e34c26"/><text x="41" y="150" class="label">HTML <tspan class="muted">10.3%</tspan></text></g>
-<g class="fade" style="animation-delay:650ms"><circle cx="200" cy="146" r="5" fill="#663399"/><text x="211" y="150" class="label">CSS <tspan class="muted">10.1%</tspan></text></g>
+<g class="fade" style="animation-delay:650ms"><circle cx="200" cy="146" r="5" fill="#663399"/><text x="211" y="150" class="label">CSS <tspan class="muted">10.2%</tspan></text></g>
 <g class="fade" style="animation-delay:750ms"><circle cx="30" cy="176" r="5" fill="#00B4AB"/><text x="41" y="180" class="label">Dart <tspan class="muted">1.7%</tspan></text></g>
 <g class="fade" style="animation-delay:850ms"><circle cx="200" cy="176" r="5" fill="#f34b7d"/><text x="211" y="180" class="label">C++ <tspan class="muted">0.2%</tspan></text></g>
 </svg>
