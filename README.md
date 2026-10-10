@@ -163,7 +163,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=34c9a06d297b" alt="Contribution activity graph" />
+  <img width="100%" src="assets/activity.svg?v=a175bf5b6ae4" alt="Contribution activity graph" />
 </div>
 
 <sub>Stats, language and project cards, and the profile views badge are refreshed hourly by a GitHub Action. The views badge keeps its last good value if the counter is unavailable.</sub>
