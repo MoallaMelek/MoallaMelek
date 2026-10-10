@@ -41,16 +41,16 @@ I care about systems that are technically credible *and* actually usable: clean 
 ## Featured Projects
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek/Reward-Goblin"><img width="49%" src="assets/pin-Reward-Goblin.svg" alt="Reward-Goblin" /></a>
-  <a href="https://github.com/MoallaMelek/Hydra-Agent-Orchestrator"><img width="49%" src="assets/pin-Hydra-Agent-Orchestrator.svg" alt="Hydra-Agent-Orchestrator" /></a>
-  <a href="https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon"><img width="49%" src="assets/pin-Reinforcement-Learning-Memory-Dungeon.svg" alt="Reinforcement-Learning-Memory-Dungeon" /></a>
-  <a href="https://github.com/MoallaMelek/Vector-CS"><img width="49%" src="assets/pin-Vector-CS.svg" alt="Vector-CS" /></a>
-  <a href="https://github.com/MoallaMelek/Deep-Learning-Plant-DNA-Optimization"><img width="49%" src="assets/pin-Deep-Learning-Plant-DNA-Optimization.svg" alt="Deep-Learning-Plant-DNA-Optimization" /></a>
-  <a href="https://github.com/MoallaMelek/AI-Driven-Therapeutic-Protein-Plant-Synthesis"><img width="49%" src="assets/pin-AI-Driven-Therapeutic-Protein-Plant-Synthesis.svg" alt="AI-Driven-Therapeutic-Protein-Plant-Synthesis" /></a>
-  <a href="https://github.com/MoallaMelek/Real-Time-Payment-Observability-Dashboard"><img width="49%" src="assets/pin-Real-Time-Payment-Observability-Dashboard.svg" alt="Real-Time-Payment-Observability-Dashboard" /></a>
-  <a href="https://github.com/MoallaMelek/Telekinesis-CV"><img width="49%" src="assets/pin-Telekinesis-CV.svg" alt="Telekinesis-CV" /></a>
-  <a href="https://github.com/MoallaMelek/Festy-Event"><img width="49%" src="assets/pin-Festy-Event.svg" alt="Festy-Event" /></a>
-  <a href="https://github.com/MoallaMelek/LogiXpress-WebSite"><img width="49%" src="assets/pin-LogiXpress-WebSite.svg" alt="LogiXpress-WebSite" /></a>
+  <a href="https://github.com/MoallaMelek/Reward-Goblin"><img width="49%" src="assets/pin-Reward-Goblin.svg" alt="Reward Goblin — PPO reward-hacking experiments" /></a>
+  <a href="https://github.com/MoallaMelek/Hydra-Agent-Orchestrator"><img width="49%" src="assets/pin-Hydra-Agent-Orchestrator.svg" alt="Hydra — Claude Code and Codex CLI agent orchestration" /></a>
+  <a href="https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon"><img width="49%" src="assets/pin-Reinforcement-Learning-Memory-Dungeon.svg" alt="Memory Dungeon — reinforcement learning in partially observable environments" /></a>
+  <a href="https://github.com/MoallaMelek/Vector-CS"><img width="49%" src="assets/pin-Vector-CS.svg" alt="Vector CS — hand-gesture control of Windows desktop applications" /></a>
+  <a href="https://github.com/MoallaMelek/Deep-Learning-Plant-DNA-Optimization"><img width="49%" src="assets/pin-Deep-Learning-Plant-DNA-Optimization.svg" alt="Plant DNA Optimization — deep learning for plant disease and genomics" /></a>
+  <a href="https://github.com/MoallaMelek/AI-Driven-Therapeutic-Protein-Plant-Synthesis"><img width="49%" src="assets/pin-AI-Driven-Therapeutic-Protein-Plant-Synthesis.svg" alt="Therapeutic Protein Plant Synthesis — plant-host-aware DNA optimization" /></a>
+  <a href="https://github.com/MoallaMelek/Real-Time-Payment-Observability-Dashboard"><img width="49%" src="assets/pin-Real-Time-Payment-Observability-Dashboard.svg" alt="Payment Observability Dashboard — real-time transaction monitoring" /></a>
+  <a href="https://github.com/MoallaMelek/Telekinesis-CV"><img width="49%" src="assets/pin-Telekinesis-CV.svg" alt="Telekinesis CV — hand-controlled augmented reality playground" /></a>
+  <a href="https://github.com/MoallaMelek/Festy-Event"><img width="49%" src="assets/pin-Festy-Event.svg" alt="Festy Event — event booking and QR ticket platform" /></a>
+  <a href="https://github.com/MoallaMelek/LogiXpress-WebSite"><img width="49%" src="assets/pin-LogiXpress-WebSite.svg" alt="LogiXpress — logistics and delivery tracking platform" /></a>
 </div>
 
 ### Project Highlights
