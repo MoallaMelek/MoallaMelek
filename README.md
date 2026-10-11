@@ -163,7 +163,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=6fbcdb72a076" alt="Contribution activity graph" />
+  <img width="100%" src="assets/activity.svg?v=c725da6b8be8" alt="Contribution activity graph" />
 </div>
 
 <sub>Stats, language and project cards, and the profile views badge are refreshed hourly by a GitHub Action. The activity chart is a snapshot from the latest refresh; newer contributions appear in the [live GitHub contribution calendar](https://github.com/MoallaMelek?tab=overview) first. The views badge keeps its last good value if the counter is unavailable.</sub>
