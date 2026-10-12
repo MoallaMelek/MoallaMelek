@@ -279,6 +279,22 @@ def streak_card(days):
     return frame(900, 180, "\n".join(body), "GitHub Streak")
 
 
+def recent_activity_card(days):
+    today = dt.datetime.now(dt.timezone.utc).date()
+    counts = {d["date"]: d["contributionCount"] for d in calendar_days(days, today)}
+    def window(length):
+        return sum(counts.get((today - dt.timedelta(days=i)).isoformat(), 0) for i in range(length))
+    values = [(150, counts.get(today.isoformat(), 0), "Today · UTC"),
+              (450, window(7), "Last 7 days"), (750, window(31), "Last 31 days")]
+    body = []
+    for x, count, label in values:
+        body.append(f'<text x="{x}" y="84" text-anchor="middle" class="value" style="font-size:30px">{count:,}</text>')
+        body.append(f'<text x="{x}" y="113" text-anchor="middle" class="label">{label}</text>')
+    active = sum(counts.get((today - dt.timedelta(days=i)).isoformat(), 0) > 0 for i in range(31))
+    body.append(f'<text x="450" y="145" text-anchor="middle" class="muted">{active} active days in the last 31 days · contributions, not only commits</text>')
+    return frame(900, 170, "\n".join(body), "Recent Activity")
+
+
 def refresh_card_links():
     """Change image URLs only when their generated contents change."""
     readme = OUT.parent / "README.md"
@@ -338,6 +354,7 @@ def main():
     (OUT / "top-langs.svg").write_text(langs_card(langs), encoding="utf-8")
     (OUT / "activity.svg").write_text(activity_card(days), encoding="utf-8")
     (OUT / "streak.svg").write_text(streak_card(lifetime_days), encoding="utf-8")
+    (OUT / "recent-activity.svg").write_text(recent_activity_card(days), encoding="utf-8")
     by_name = {r["name"]: r for r in repos}
     for name in PINNED:
         if name in by_name:
