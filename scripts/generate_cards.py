@@ -355,6 +355,12 @@ def main():
     (OUT / "activity.svg").write_text(activity_card(days), encoding="utf-8")
     (OUT / "streak.svg").write_text(streak_card(lifetime_days), encoding="utf-8")
     (OUT / "recent-activity.svg").write_text(recent_activity_card(days), encoding="utf-8")
+    refreshed = now.strftime("%Y-%m-%d %H:%M UTC")
+    (OUT / "activity-updated.svg").write_text(frame(900, 42,
+        f'<text x="450" y="26" text-anchor="middle" class="muted">Updated {refreshed} · GitHub contribution calendar</text>'), encoding="utf-8")
+    snapshot = {"updated_at": now.isoformat(), "user": USER, "stats": stats,
+                "streak": streak_metrics(lifetime_days, now.date()), "days": calendar_days(days, now.date())}
+    (OUT / "activity-data.json").write_text(json.dumps(snapshot, indent=2) + "\n", encoding="utf-8")
     by_name = {r["name"]: r for r in repos}
     for name in PINNED:
         if name in by_name:
