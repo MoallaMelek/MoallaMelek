@@ -79,18 +79,25 @@ def graphql(query, variables):
     return payload["data"]
 
 
-def all_time_commits(created_at):
+def all_time_activity(created_at):
     """contributionsCollection spans at most one year, so sum per calendar year."""
     q = """query($login: String!, $from: DateTime!, $to: DateTime!) {
-      user(login: $login) { contributionsCollection(from: $from, to: $to) { totalCommitContributions } } }"""
+      user(login: $login) { contributionsCollection(from: $from, to: $to) {
+        totalCommitContributions
+        contributionCalendar { weeks { contributionDays { date contributionCount } } }
+      } } }"""
     now = dt.datetime.now(dt.timezone.utc)
     total = 0
+    days = []
     for year in range(created_at.year, now.year + 1):
         start = max(created_at, dt.datetime(year, 1, 1, tzinfo=dt.timezone.utc))
         end = min(now, dt.datetime(year, 12, 31, 23, 59, 59, tzinfo=dt.timezone.utc))
         data = graphql(q, {"login": USER, "from": start.isoformat(), "to": end.isoformat()})
-        total += data["user"]["contributionsCollection"]["totalCommitContributions"]
-    return total
+        collection = data["user"]["contributionsCollection"]
+        total += collection["totalCommitContributions"]
+        days.extend(d for week in collection["contributionCalendar"]["weeks"] for d in week["contributionDays"]
+                    if start.date().isoformat() <= d["date"] <= end.date().isoformat())
+    return total, calendar_days(days)
 
 
 def frame(width, height, body, title=None):
@@ -274,9 +281,10 @@ def main():
         {"login": USER, "from": year_start.isoformat(), "to": now.isoformat()},
     )["user"]["contributionsCollection"]["contributionCalendar"]["totalContributions"]
 
+    commits, lifetime_days = all_time_activity(created)
     stats = {
         "stars": sum(r["stargazerCount"] for r in repos),
-        "commits": all_time_commits(created),
+        "commits": commits,
         "year": now.year,
         "year_contribs": year_data,
         "prs": data["pullRequests"]["totalCount"],
