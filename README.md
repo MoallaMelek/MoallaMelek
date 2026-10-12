@@ -159,14 +159,18 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=8fac91aeeb3a" alt="GitHub streak" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/streak.svg" alt="Current streak, longest streak and active contribution days" /></a>
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=007c92f5e000" alt="Contribution activity graph" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=007c92f5e000" alt="Contribution activity graph for the last 31 days" /></a>
+  <img width="100%" src="assets/recent-activity.svg" alt="Contributions today, in the last 7 days and in the last 31 days" />
+  <img width="100%" src="assets/activity-updated.svg" alt="Activity snapshot refresh timestamp in UTC" />
 </div>
 
-<sub>Stats, language and project cards, and the profile views badge are refreshed hourly by a GitHub Action. The activity chart is a snapshot from the latest refresh; newer contributions appear in the [live GitHub contribution calendar](https://github.com/MoallaMelek?tab=overview) first. The views badge keeps its last good value if the counter is unavailable.</sub>
+[![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
+
+<sub>Activity, streaks, stats, languages, project cards and profile views refresh hourly and after profile updates. Contributions use UTC dates; today can still be completed without resetting the current streak. [Live contribution calendar](https://github.com/MoallaMelek?tab=overview) · [Snapshot data](assets/activity-data.json). GitHub may take time to count new commits. Profile views retain the last good value if the counter is unavailable.</sub>
 
 ---
 
