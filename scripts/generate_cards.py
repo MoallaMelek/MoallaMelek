@@ -195,8 +195,15 @@ def pin_card(repo):
     return frame(420, 150, body)
 
 
+def calendar_days(days, today=None):
+    """Sort and deduplicate dates, excluding future padding in GitHub calendars."""
+    today = today or dt.datetime.now(dt.timezone.utc).date()
+    by_date = {d["date"]: d for d in days if dt.date.fromisoformat(d["date"]) <= today}
+    return [by_date[key] for key in sorted(by_date)]
+
+
 def activity_card(days):
-    days = days[-31:]
+    days = calendar_days(days)[-31:]
     w, h, left, right, top, bottom = 900, 280, 50, 25, 55, 45
     pw, ph = w - left - right, h - top - bottom
     peak = max(4, max(d["contributionCount"] for d in days))
