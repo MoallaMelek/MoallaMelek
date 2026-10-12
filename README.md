@@ -154,16 +154,16 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=38c4365b7035" alt="GitHub stats" />
+  <img height="180" src="assets/stats.svg?v=8fac91aeeb3a" alt="GitHub stats" />
   <img height="180" src="assets/top-langs.svg?v=b6d9f2184501" alt="Most used languages" />
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=38c4365b7035" alt="GitHub streak" />
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=8fac91aeeb3a" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=c725da6b8be8" alt="Contribution activity graph" />
+  <img width="100%" src="assets/activity.svg?v=007c92f5e000" alt="Contribution activity graph" />
 </div>
 
 <sub>Stats, language and project cards, and the profile views badge are refreshed hourly by a GitHub Action. The activity chart is a snapshot from the latest refresh; newer contributions appear in the [live GitHub contribution calendar](https://github.com/MoallaMelek?tab=overview) first. The views badge keeps its last good value if the counter is unavailable.</sub>
