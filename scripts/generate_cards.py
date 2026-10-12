@@ -250,6 +250,35 @@ def activity_card(days):
     return frame(w, h, body, "Contribution Activity")
 
 
+def streak_metrics(days, today=None):
+    """Count consecutive active UTC dates; allow today to remain unfinished."""
+    today = today or dt.datetime.now(dt.timezone.utc).date()
+    days = calendar_days(days, today)
+    active = {dt.date.fromisoformat(d["date"]) for d in days if d["contributionCount"] > 0}
+    longest = run = 0
+    previous = None
+    for date in sorted(active):
+        run = run + 1 if previous == date - dt.timedelta(days=1) else 1
+        longest = max(longest, run)
+        previous = date
+    cursor = today if today in active else today - dt.timedelta(days=1)
+    current = 0
+    while cursor in active:
+        current += 1
+        cursor -= dt.timedelta(days=1)
+    return {"current": current, "longest": longest, "active_days": len(active)}
+
+
+def streak_card(days):
+    values = streak_metrics(days)
+    body = []
+    for x, key, label in [(150, "active_days", "Active days"), (450, "current", "Current streak"), (750, "longest", "Longest streak")]:
+        body.append(f'<text x="{x}" y="90" text-anchor="middle" class="value" style="font-size:32px;fill:{ICON}">{values[key]:,}</text>')
+        body.append(f'<text x="{x}" y="122" text-anchor="middle" class="label">{label}</text>')
+    body.append('<text x="450" y="158" text-anchor="middle" class="muted">Consecutive contribution days · UTC · today can still be completed</text>')
+    return frame(900, 180, "\n".join(body), "GitHub Streak")
+
+
 def refresh_card_links():
     """Change image URLs only when their generated contents change."""
     readme = OUT.parent / "README.md"
@@ -308,6 +337,7 @@ def main():
     (OUT / "stats.svg").write_text(stats_card(stats), encoding="utf-8")
     (OUT / "top-langs.svg").write_text(langs_card(langs), encoding="utf-8")
     (OUT / "activity.svg").write_text(activity_card(days), encoding="utf-8")
+    (OUT / "streak.svg").write_text(streak_card(lifetime_days), encoding="utf-8")
     by_name = {r["name"]: r for r in repos}
     for name in PINNED:
         if name in by_name:
