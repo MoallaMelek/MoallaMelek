@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="42" viewBox="0 0 900 42" fill="none" role="img">
+<style>
+  text { font-family:'Segoe UI',Ubuntu,'Helvetica Neue',Sans-Serif; }
+  .title { font-size: 18px; font-weight: 600; fill: #58A6FF; }
+  .label { font-size: 14px; fill: #C9D1D9; }
+  .value { font-size: 14px; font-weight: 700; fill: #C9D1D9; }
+  .muted { font-size: 12px; fill: #8B949E; }
+  .fade { opacity: 0; animation: fade .5s ease-in-out forwards; }
+  @keyframes fade { to { opacity: 1; } }
+</style>
+<rect x="0.5" y="0.5" rx="10" width="899" height="41" fill="#0D1117" stroke="#30363D"/>
+
+<text x="450" y="26" text-anchor="middle" class="muted">Updated 2026-10-12 21:47 UTC · GitHub contribution calendar</text>
+</svg>
