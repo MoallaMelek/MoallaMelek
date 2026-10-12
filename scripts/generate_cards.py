@@ -205,12 +205,14 @@ def calendar_days(days, today=None):
 def activity_card(days):
     days = calendar_days(days)[-31:]
     w, h, left, right, top, bottom = 900, 280, 50, 25, 55, 45
+    if not days:
+        return frame(w, h, '<text x="25" y="75" class="muted">No contribution data available yet.</text>', "Contribution Activity")
     pw, ph = w - left - right, h - top - bottom
     peak = max(4, max(d["contributionCount"] for d in days))
     step = -(-peak // 4)  # ceil
     peak = step * 4
     pts = [
-        (left + i * pw / (len(days) - 1), top + ph - ph * d["contributionCount"] / peak)
+        (left + i * pw / max(1, len(days) - 1), top + ph - ph * d["contributionCount"] / peak)
         for i, d in enumerate(days)
     ]
     grid = []
