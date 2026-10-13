@@ -210,7 +210,7 @@ def calendar_days(days, today=None):
 
 
 def activity_card(days):
-    days = calendar_days(days)[-31:]
+    days = [d for d in calendar_days(days) if d["date"] >= "2026-09-26"]
     w, h, left, right, top, bottom = 900, 280, 50, 25, 55, 45
     if not days:
         return frame(w, h, '<text x="25" y="75" class="muted">No contribution data available yet.</text>', "Contribution Activity")
@@ -227,8 +227,9 @@ def activity_card(days):
         y = top + ph - ph * k / 4
         grid.append(f'<line x1="{left}" x2="{w - right}" y1="{y:.1f}" y2="{y:.1f}" stroke="{BORDER}" stroke-dasharray="3 4"/>')
         grid.append(f'<text x="{left - 10}" y="{y + 4:.1f}" class="muted" text-anchor="end">{step * k}</text>')
+    label_step = max(5, -(-(len(days) - 1) // 6))
     for i, d in enumerate(days):
-        if i % 5 == 0 or i == len(days) - 1:
+        if i == len(days) - 1 or (i % label_step == 0 and len(days) - 1 - i >= label_step / 2):
             date = dt.date.fromisoformat(d["date"])
             grid.append(
                 f'<text x="{pts[i][0]:.1f}" y="{h - 20}" class="muted" text-anchor="middle">{date.strftime("%b %d")}</text>'
@@ -241,7 +242,7 @@ def activity_card(days):
 <defs><linearGradient id="area" x1="0" y1="0" x2="0" y2="1">
   <stop offset="0" stop-color="{TITLE}" stop-opacity=".35"/><stop offset="1" stop-color="{TITLE}" stop-opacity="0"/>
 </linearGradient></defs>
-<text x="{w - 25}" y="35" class="muted" text-anchor="end">{total} contributions in the last 31 days</text>
+<text x="{w - 25}" y="35" class="muted" text-anchor="end">{total} contributions since Sep 26, 2026</text>
 {''.join(grid)}
 <polygon points="{area}" fill="url(#area)"/>
 <polyline points="{line}" stroke="{TITLE}" stroke-width="2.5" stroke-linejoin="round" fill="none"/>
@@ -354,7 +355,7 @@ def main():
     OUT.mkdir(exist_ok=True)
     (OUT / "stats.svg").write_text(stats_card(stats), encoding="utf-8")
     (OUT / "top-langs.svg").write_text(langs_card(langs), encoding="utf-8")
-    (OUT / "activity.svg").write_text(activity_card(days), encoding="utf-8")
+    (OUT / "activity.svg").write_text(activity_card(lifetime_days), encoding="utf-8")
     (OUT / "streak.svg").write_text(streak_card(lifetime_days), encoding="utf-8")
     (OUT / "recent-activity.svg").write_text(recent_activity_card(days), encoding="utf-8")
     refreshed = now.strftime("%Y-%m-%d %H:%M UTC")

@@ -163,7 +163,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img width="100%" src="assets/activity.svg?v=3843633a69f4" alt="Contribution activity graph" />
+  <img width="100%" src="assets/activity.svg?v=e9d103bc382b" alt="Contribution activity graph" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
