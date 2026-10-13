@@ -304,6 +304,10 @@ def refresh_card_links():
         digest = hashlib.sha256((OUT.parent / path).read_bytes()).hexdigest()[:12]
         return f"{path}?v={digest}"
     content = re.sub(r"(assets/(?:stats|top-langs|activity|streak|recent-activity|activity-updated|profile-views|pin-[A-Za-z0-9-]+)\.svg)(?:\?v=[A-Za-z0-9_-]+)?", version, content)
+    # Keep the historical streak service fresh alongside the owned cards.
+    streak_version = hashlib.sha256((OUT / "streak.svg").read_bytes() +
+                                    dt.datetime.now(dt.timezone.utc).date().isoformat().encode()).hexdigest()[:12]
+    content = re.sub(r'(https://streak-stats\.demolab\.com[^"\s]*[&]v=)[A-Za-z0-9_-]+', lambda match: match.group(1) + streak_version, content)
     readme.write_text(content, encoding="utf-8")
 
 

@@ -159,13 +159,11 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/streak.svg?v=f477d9cda737" alt="Current streak, longest streak and active contribution days" /></a>
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=d1f7934fede9" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=a65b896174ed" alt="Contribution activity graph for the last 31 days" /></a>
-  <img width="100%" src="assets/recent-activity.svg?v=1a89ba357f22" alt="Contributions today, in the last 7 days and in the last 31 days" />
-  <img width="100%" src="assets/activity-updated.svg?v=128d7e317384" alt="Activity snapshot refresh timestamp in UTC" />
+  <img width="100%" src="assets/activity.svg?v=a65b896174ed" alt="Contribution activity graph" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
