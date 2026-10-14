@@ -155,7 +155,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 <div align="center">
   <img height="180" src="assets/stats.svg?v=d5e97e61c0e5" alt="GitHub stats" />
-  <img height="180" src="assets/top-langs.svg?v=f5783d4a4493" alt="Most used languages" />
+  <img height="180" src="assets/top-langs.svg?v=44527f21b5ce" alt="Most used languages" />
 </div>
 
 <div align="center">
