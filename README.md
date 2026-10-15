@@ -53,6 +53,14 @@ I care about systems that are technically credible *and* actually usable: clean 
   <a href="https://github.com/MoallaMelek/LogiXpress-WebSite"><img width="49%" src="assets/pin-LogiXpress-WebSite.svg?v=9676c29f0dec" alt="LogiXpress — logistics and delivery tracking platform" /></a>
 </div>
 
+### DÉCLIC · Musical Learning Intelligence
+
+[**Explore the current Phase 7 delivery →**](https://github.com/MoallaMelek/Declics-Knowledge-Tracing-for-Learner-Progress-and-Skill-Prediction.)
+
+Real musical learning histories, PyTorch forecasts and a demonstration that reveals the observed outcome only after predicting it. **36 completed neural training runs · 3 musical datasets · 315 passing tests.** Results include a modest exploratory gain on SingPAD; no convincing average neural advantage on AMME or Yousician. Piano transfer and educational benefit remain unvalidated.
+
+[Research report](https://github.com/MoallaMelek/Declics-Knowledge-Tracing-for-Learner-Progress-and-Skill-Prediction./blob/phase7/personalized-musical-learning/docs/PHASE7_REPORT.md) · [Measured results](https://github.com/MoallaMelek/Declics-Knowledge-Tracing-for-Learner-Progress-and-Skill-Prediction./blob/phase7/personalized-musical-learning/docs/PHASE7_RESULTS.md) · [Demo guide](https://github.com/MoallaMelek/Declics-Knowledge-Tracing-for-Learner-Progress-and-Skill-Prediction./blob/phase7/personalized-musical-learning/docs/PHASE7_DEMO_GUIDE.md)
+
 ### Project Highlights
 
 | Project | What it does | Stack |
@@ -159,16 +167,18 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=52a8d0634932" alt="GitHub streak" />
+  <img height="180" src="assets/streak.svg" alt="GitHub streak from the contribution calendar" />
 </div>
 
 <div align="center">
+  <img width="100%" src="assets/recent-activity.svg" alt="Contributions today, in the last seven days and in the last month" />
+  <img width="100%" src="assets/activity-updated.svg" alt="Last contribution data refresh in UTC" />
   <img width="100%" src="assets/activity.svg?v=18ca12e11158" alt="Contribution activity graph" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
 
-<sub>Activity, streaks, stats, languages, project cards and profile views refresh hourly and after profile updates. Contributions use UTC dates; today can still be completed without resetting the current streak. [Live contribution calendar](https://github.com/MoallaMelek?tab=overview) · [Snapshot data](assets/activity-data.json). GitHub may take time to count new commits. Profile views retain the last good value if the counter is unavailable.</sub>
+<sub>Activity, streaks, stats, languages, project cards and profile views refresh hourly and after profile updates. Contributions use UTC dates; today can still be completed without resetting the current streak. [Live contribution calendar](https://github.com/MoallaMelek?tab=overview) · [Snapshot data](assets/activity-data.json). GitHub may take up to 24 hours to count eligible new commits; work on feature branches appears after integration into the default branch. These cards display GitHub’s reported counts, not every pushed commit. Profile views retain the last good value if the counter is unavailable.</sub>
 
 ---
 
@@ -193,4 +203,5 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&color=0:0D1117,35:111827,70:1F2937,100:2563EB" alt="" />
 
 </div>
+
 
