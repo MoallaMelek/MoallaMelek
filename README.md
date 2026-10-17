@@ -154,8 +154,8 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=2cedef2cb82a" alt="GitHub stats" />
-  <img height="180" src="assets/top-langs.svg?v=d94314a35267" alt="Most used languages" />
+  <img height="180" src="assets/stats.svg?v=d24e4b27ef81" alt="GitHub stats" />
+  <img height="180" src="assets/top-langs.svg?v=0fe3e186998a" alt="Most used languages" />
 </div>
 
 <div align="center">
@@ -163,8 +163,8 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=0dd067e46fbf" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=3732d1cecf21" alt="Activity data last refreshed" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=900b295c61e9" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=c4efa1da9ba4" alt="Activity data last refreshed" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
