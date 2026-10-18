@@ -7,7 +7,7 @@
 [![Portfolio](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://melek-moalla.vercel.app)
 [![CV](https://img.shields.io/badge/CV-Download%20PDF-2563EB?style=for-the-badge)](https://melek-moalla.vercel.app/Melek-Moalla-CV.pdf)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-Melek%20Moalla-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/melek-moalla-14a5a4357)
-[![Profile Views](assets/profile-views.svg?v=b3b873f25a95)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
+[![Profile Views](assets/profile-views.svg?v=d39a5177f00c)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
 [![GitHub followers](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
 [![AI Engineering Student](https://img.shields.io/badge/Role-AI%20Engineering%20Student-2563EB?style=for-the-badge)](#about-me)
 [![Full-Stack AI Developer](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
@@ -154,17 +154,17 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=d24e4b27ef81" alt="GitHub stats" />
-  <img height="180" src="assets/top-langs.svg?v=0fe3e186998a" alt="Most used languages" />
+  <img height="180" src="assets/stats.svg?v=28e64b924d9c" alt="GitHub stats" />
+  <img height="180" src="assets/top-langs.svg?v=79258a720c6c" alt="Most used languages" />
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=8fcbc9790e8c" alt="GitHub streak" />
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=52dd35abc934" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=3df78e24b6e8" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=99debe75f70e" alt="Activity data last refreshed" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=cef57e15da95" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=1c7f916d9b1a" alt="Activity data last refreshed" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
