@@ -175,6 +175,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 ## What I Am Building Next
 
+- [Déclic — Learner Progress and Skill Prediction](https://github.com/MoallaMelek/Declics-Knowledge-Tracing-for-Learner-Progress-and-Skill-Prediction.): exploring deep-learning approaches to knowledge tracing and future learner performance, with reproducible evaluation as a priority
 - Currently improving [Reward Goblin](https://github.com/MoallaMelek/Reward-Goblin), my reinforcement-learning playground for exploring reward hacking with real PPO agents and separate task-success evaluation
 - Smarter RAG-driven experiences with strong retrieval quality and practical UX
 - AI-first full-stack applications where backend intelligence directly shapes the interface
