@@ -164,7 +164,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 <div align="center">
   <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=969c6f2490ac" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=ae91c669fd59" alt="Activity data last refreshed" />
+  <img width="100%" src="assets/activity-updated.svg?v=e99bff2c4c4c" alt="Activity data last refreshed" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
