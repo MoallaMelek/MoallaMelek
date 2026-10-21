@@ -38,3 +38,22 @@ python scripts/generate_cards.py
 
 The generator uses only Python's standard library. Its JSON snapshot records
 the refresh time in UTC; Tunisia local time is UTC+1.
+
+## Diagnosing a stale graph without changing its design
+
+Run `python -m unittest discover -s tests` before changing generation code. The
+regressions check streak boundaries, SVG dimensions, green calendar colors,
+curve coordinates, text escaping, reduced-motion support, and image hashes.
+
+If the calendar is current but a README image is stale, compare its `?v=` value
+with the first 12 hexadecimal characters of the SVG's SHA-256. Regenerate the
+cards and links together; do not edit counts or chart coordinates by hand.
+If both are stale, inspect the latest **Update profile cards** run and its
+generation step. Re-run the workflow after new default-branch commits have
+appeared in GitHub's calendar. A successful push alone does not prove indexing.
+
+For an activity audit, save the calendar count before and after the work, record
+the new commit hashes and their default branches, and verify each commit's author
+is associated with the profile owner. Report the observed difference separately
+from the number pushed. Automated card-refresh commits belong to the bot and
+must not be reported as new owner-authored contributions.
