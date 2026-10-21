@@ -159,7 +159,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <img height="180" src="assets/streak.svg?v=56de2e0bc8fa" alt="GitHub streak" />
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=5edda99a49e2" alt="GitHub streak" />
 </div>
 
 <div align="center">
