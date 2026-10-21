@@ -5,8 +5,9 @@
   .label { font-size: 14px; fill: #C9D1D9; }
   .value { font-size: 14px; font-weight: 700; fill: #C9D1D9; }
   .muted { font-size: 12px; fill: #8B949E; }
-  .fade { opacity: 0; animation: fade .5s ease-in-out forwards; }
-  @keyframes fade { to { opacity: 1; } }
+  .fade { opacity: 1; animation: fade .5s ease-in-out backwards; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .fade { animation: none; } }
 </style>
 <rect x="0.5" y="0.5" rx="10" width="419" height="149" fill="#0D1117" stroke="#30363D"/>
 

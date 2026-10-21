@@ -5,16 +5,17 @@
   .label { font-size: 14px; fill: #C9D1D9; }
   .value { font-size: 14px; font-weight: 700; fill: #C9D1D9; }
   .muted { font-size: 12px; fill: #8B949E; }
-  .fade { opacity: 0; animation: fade .5s ease-in-out forwards; }
-  @keyframes fade { to { opacity: 1; } }
+  .fade { opacity: 1; animation: fade .5s ease-in-out backwards; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .fade { animation: none; } }
 </style>
 <rect x="0.5" y="0.5" rx="10" width="899" height="169" fill="#0D1117" stroke="#30363D"/>
 <text x="25" y="35" class="title">Recent Activity</text>
-<text x="150" y="84" text-anchor="middle" class="value" style="font-size:30px">1</text>
+<text x="150" y="84" text-anchor="middle" class="value" style="font-size:30px">20</text>
 <text x="150" y="113" text-anchor="middle" class="label">Today · UTC</text>
-<text x="450" y="84" text-anchor="middle" class="value" style="font-size:30px">103</text>
+<text x="450" y="84" text-anchor="middle" class="value" style="font-size:30px">122</text>
 <text x="450" y="113" text-anchor="middle" class="label">Last 7 days</text>
-<text x="750" y="84" text-anchor="middle" class="value" style="font-size:30px">287</text>
+<text x="750" y="84" text-anchor="middle" class="value" style="font-size:30px">306</text>
 <text x="750" y="113" text-anchor="middle" class="label">Last 31 days</text>
 <text x="450" y="145" text-anchor="middle" class="muted">25 active days in the last 31 days · contributions, not only commits</text>
 </svg>

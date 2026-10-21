@@ -5,22 +5,23 @@
   .label { font-size: 14px; fill: #C9D1D9; }
   .value { font-size: 14px; font-weight: 700; fill: #C9D1D9; }
   .muted { font-size: 12px; fill: #8B949E; }
-  .fade { opacity: 0; animation: fade .5s ease-in-out forwards; }
-  @keyframes fade { to { opacity: 1; } }
+  .fade { opacity: 1; animation: fade .5s ease-in-out backwards; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .fade { animation: none; } }
 </style>
 <rect x="0.5" y="0.5" rx="10" width="379" height="224" fill="#0D1117" stroke="#30363D"/>
 <text x="25" y="35" class="title">Most Used Languages</text>
 <clipPath id="bar"><rect x="25" y="55" width="330" height="8" rx="4"/></clipPath><g clip-path="url(#bar)">
-<rect x="25.00" y="55" width="140.21" height="8" fill="#3572A5"/>
-<rect x="164.71" y="55" width="55.76" height="8" fill="#f1e05a"/>
-<rect x="219.97" y="55" width="37.24" height="8" fill="#4F5D95"/>
-<rect x="256.72" y="55" width="34.56" height="8" fill="#e34c26"/>
-<rect x="290.78" y="55" width="29.80" height="8" fill="#663399"/>
-<rect x="320.08" y="55" width="26.80" height="8" fill="#3178c6"/>
-<rect x="346.38" y="55" width="5.93" height="8" fill="#00B4AB"/>
+<rect x="25.00" y="55" width="140.30" height="8" fill="#3572A5"/>
+<rect x="164.80" y="55" width="55.74" height="8" fill="#f1e05a"/>
+<rect x="220.04" y="55" width="37.20" height="8" fill="#4F5D95"/>
+<rect x="256.74" y="55" width="34.52" height="8" fill="#e34c26"/>
+<rect x="290.77" y="55" width="29.77" height="8" fill="#663399"/>
+<rect x="320.03" y="55" width="26.86" height="8" fill="#3178c6"/>
+<rect x="346.39" y="55" width="5.93" height="8" fill="#00B4AB"/>
 <rect x="351.82" y="55" width="1.71" height="8" fill="#DA5B0B"/>
 </g>
-<g class="fade" style="animation-delay:150ms"><circle cx="30" cy="86" r="5" fill="#3572A5"/><text x="41" y="90" class="label">Python <tspan class="muted">42.3%</tspan></text></g>
+<g class="fade" style="animation-delay:150ms"><circle cx="30" cy="86" r="5" fill="#3572A5"/><text x="41" y="90" class="label">Python <tspan class="muted">42.4%</tspan></text></g>
 <g class="fade" style="animation-delay:250ms"><circle cx="200" cy="86" r="5" fill="#f1e05a"/><text x="211" y="90" class="label">JavaScript <tspan class="muted">16.7%</tspan></text></g>
 <g class="fade" style="animation-delay:350ms"><circle cx="30" cy="116" r="5" fill="#4F5D95"/><text x="41" y="120" class="label">PHP <tspan class="muted">11.1%</tspan></text></g>
 <g class="fade" style="animation-delay:450ms"><circle cx="200" cy="116" r="5" fill="#e34c26"/><text x="211" y="120" class="label">HTML <tspan class="muted">10.3%</tspan></text></g>

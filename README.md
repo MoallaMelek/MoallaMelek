@@ -41,16 +41,16 @@ I care about systems that are technically credible *and* actually usable: clean 
 ## Featured Projects
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek/Reward-Goblin"><img width="49%" src="assets/pin-Reward-Goblin.svg?v=c83ade1b1f52" alt="Reward Goblin — PPO reward-hacking experiments" /></a>
-  <a href="https://github.com/MoallaMelek/Hydra-Agent-Orchestrator"><img width="49%" src="assets/pin-Hydra-Agent-Orchestrator.svg?v=04fab85c3188" alt="Hydra — Claude Code and Codex CLI agent orchestration" /></a>
-  <a href="https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon"><img width="49%" src="assets/pin-Reinforcement-Learning-Memory-Dungeon.svg?v=abaf3632ed0c" alt="Memory Dungeon — reinforcement learning in partially observable environments" /></a>
-  <a href="https://github.com/MoallaMelek/Vector-CS"><img width="49%" src="assets/pin-Vector-CS.svg?v=948150aa7659" alt="Vector CS — hand-gesture control of Windows desktop applications" /></a>
-  <a href="https://github.com/MoallaMelek/Deep-Learning-Plant-DNA-Optimization"><img width="49%" src="assets/pin-Deep-Learning-Plant-DNA-Optimization.svg?v=ac5b15e1081d" alt="Plant DNA Optimization — deep learning for plant disease and genomics" /></a>
-  <a href="https://github.com/MoallaMelek/AI-Driven-Therapeutic-Protein-Plant-Synthesis"><img width="49%" src="assets/pin-AI-Driven-Therapeutic-Protein-Plant-Synthesis.svg?v=53cc4058fc71" alt="Therapeutic Protein Plant Synthesis — plant-host-aware DNA optimization" /></a>
-  <a href="https://github.com/MoallaMelek/Real-Time-Payment-Observability-Dashboard"><img width="49%" src="assets/pin-Real-Time-Payment-Observability-Dashboard.svg?v=e1e9d26b67f0" alt="Payment Observability Dashboard — real-time transaction monitoring" /></a>
-  <a href="https://github.com/MoallaMelek/Telekinesis-CV"><img width="49%" src="assets/pin-Telekinesis-CV.svg?v=c9ffb3539ffe" alt="Telekinesis CV — hand-controlled augmented reality playground" /></a>
-  <a href="https://github.com/MoallaMelek/Festy-Event"><img width="49%" src="assets/pin-Festy-Event.svg?v=da40d89b121e" alt="Festy Event — event booking and QR ticket platform" /></a>
-  <a href="https://github.com/MoallaMelek/LogiXpress-WebSite"><img width="49%" src="assets/pin-LogiXpress-WebSite.svg?v=9676c29f0dec" alt="LogiXpress — logistics and delivery tracking platform" /></a>
+  <a href="https://github.com/MoallaMelek/Reward-Goblin"><img width="49%" src="assets/pin-Reward-Goblin.svg?v=c4f4839bd630" alt="Reward Goblin — PPO reward-hacking experiments" /></a>
+  <a href="https://github.com/MoallaMelek/Hydra-Agent-Orchestrator"><img width="49%" src="assets/pin-Hydra-Agent-Orchestrator.svg?v=91c1f766a2c9" alt="Hydra — Claude Code and Codex CLI agent orchestration" /></a>
+  <a href="https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon"><img width="49%" src="assets/pin-Reinforcement-Learning-Memory-Dungeon.svg?v=7174ab7b9be1" alt="Memory Dungeon — reinforcement learning in partially observable environments" /></a>
+  <a href="https://github.com/MoallaMelek/Vector-CS"><img width="49%" src="assets/pin-Vector-CS.svg?v=aabc382306c1" alt="Vector CS — hand-gesture control of Windows desktop applications" /></a>
+  <a href="https://github.com/MoallaMelek/Deep-Learning-Plant-DNA-Optimization"><img width="49%" src="assets/pin-Deep-Learning-Plant-DNA-Optimization.svg?v=f1829b112e9a" alt="Plant DNA Optimization — deep learning for plant disease and genomics" /></a>
+  <a href="https://github.com/MoallaMelek/AI-Driven-Therapeutic-Protein-Plant-Synthesis"><img width="49%" src="assets/pin-AI-Driven-Therapeutic-Protein-Plant-Synthesis.svg?v=c816328a6200" alt="Therapeutic Protein Plant Synthesis — plant-host-aware DNA optimization" /></a>
+  <a href="https://github.com/MoallaMelek/Real-Time-Payment-Observability-Dashboard"><img width="49%" src="assets/pin-Real-Time-Payment-Observability-Dashboard.svg?v=5e5b0655f156" alt="Payment Observability Dashboard — real-time transaction monitoring" /></a>
+  <a href="https://github.com/MoallaMelek/Telekinesis-CV"><img width="49%" src="assets/pin-Telekinesis-CV.svg?v=47c8fd968e62" alt="Telekinesis CV — hand-controlled augmented reality playground" /></a>
+  <a href="https://github.com/MoallaMelek/Festy-Event"><img width="49%" src="assets/pin-Festy-Event.svg?v=5da22ff18b7a" alt="Festy Event — event booking and QR ticket platform" /></a>
+  <a href="https://github.com/MoallaMelek/LogiXpress-WebSite"><img width="49%" src="assets/pin-LogiXpress-WebSite.svg?v=66f6b9ae2adc" alt="LogiXpress — logistics and delivery tracking platform" /></a>
 </div>
 
 ### Project Highlights
@@ -154,18 +154,18 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=5c2bb9ac6d6b" alt="GitHub stats" />
-  <img height="180" src="assets/top-langs.svg?v=79258a720c6c" alt="Most used languages" />
+  <img height="180" src="assets/stats.svg?v=ee9f16dac208" alt="GitHub stats" />
+  <img height="180" src="assets/top-langs.svg?v=5dcf7496294a" alt="Most used languages" />
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=efc7549caf4b" alt="GitHub streak" />
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=82cd3e0d6ca1" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/heatmap.svg" alt="Contribution heatmap for the last 365 days — actual GitHub contributions by UTC date" /></a>
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=448bc7330714" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=045d33b7df1a" alt="Activity data last refreshed" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/heatmap.svg?v=ab9ad01defdb" alt="Contribution heatmap for the last 365 days — actual GitHub contributions by UTC date" /></a>
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=ff10ae05e82f" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=6da330ecb80f" alt="Activity data last refreshed" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)

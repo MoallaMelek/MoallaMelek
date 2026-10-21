@@ -5,10 +5,11 @@
   .label { font-size: 14px; fill: #C9D1D9; }
   .value { font-size: 14px; font-weight: 700; fill: #C9D1D9; }
   .muted { font-size: 12px; fill: #8B949E; }
-  .fade { opacity: 0; animation: fade .5s ease-in-out forwards; }
-  @keyframes fade { to { opacity: 1; } }
+  .fade { opacity: 1; animation: fade .5s ease-in-out backwards; }
+  @keyframes fade { from { opacity: 0; } to { opacity: 1; } }
+  @media (prefers-reduced-motion: reduce) { .fade { animation: none; } }
 </style>
 <rect x="0.5" y="0.5" rx="10" width="899" height="41" fill="#0D1117" stroke="#30363D"/>
 
-<text x="450" y="26" text-anchor="middle" class="muted">Updated 2026-10-21 00:42 UTC · GitHub contribution calendar</text>
+<text x="450" y="26" text-anchor="middle" class="muted">Updated 2026-10-21 00:56 UTC · GitHub contribution calendar</text>
 </svg>
