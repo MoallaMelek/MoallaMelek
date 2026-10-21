@@ -9,6 +9,7 @@ on:
     paths:
       - README.md
       - scripts/**
+      - tests/**
       - .github/workflows/cards.yml
 
 permissions:
@@ -30,6 +31,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+
+      - name: Check card generation
+        run: python -m unittest discover -s tests
 
       - name: Refresh profile views snapshot
         env:

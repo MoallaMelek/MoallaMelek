@@ -251,6 +251,32 @@ def activity_card(days):
     return frame(w, h, body, "Contribution Activity")
 
 
+def heatmap_card(days, today=None):
+    """Show a rolling year from the same GitHub calendar as the activity curve."""
+    today = today or dt.datetime.now(dt.timezone.utc).date()
+    first = today - dt.timedelta(days=364)
+    sunday = first - dt.timedelta(days=(first.weekday() + 1) % 7)
+    columns = (today - sunday).days // 7 + 1
+    step = 825 / columns
+    size = min(12, step - 2)
+    counts = {d["date"]: d["contributionCount"] for d in calendar_days(days, today)}
+    peak = max((counts.get((first + dt.timedelta(days=i)).isoformat(), 0) for i in range(365)), default=0)
+    palette = ["#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"]
+    body = []
+    for offset in range(365):
+        date = first + dt.timedelta(days=offset)
+        column, row = divmod((date - sunday).days, 7)
+        count = counts.get(date.isoformat(), 0)
+        level = min(4, max(1, (count * 4 + max(1, peak) - 1) // max(1, peak))) if count else 0
+        x, y = 50 + column * step, 60 + row * 15
+        body.append(f'<rect data-date="{date}" x="{x:.1f}" y="{y}" width="{size:.1f}" height="12" rx="2" fill="{palette[level]}"><title>{date}: {count} contributions</title></rect>')
+        if date.day <= 7 and row == 0:
+            body.append(f'<text x="{x:.1f}" y="52" class="muted">{date.strftime("%b")}</text>')
+    for row, label in [(1, "Mon"), (3, "Wed"), (5, "Fri")]:
+        body.append(f'<text x="10" y="{70 + row * 15}" class="muted">{label}</text>')
+    return frame(900, 180, "\n".join(body), "Contribution Calendar · last 365 days")
+
+
 def streak_metrics(days, today=None):
     """Count consecutive active UTC dates; allow today to remain unfinished."""
     today = today or dt.datetime.now(dt.timezone.utc).date()
@@ -304,7 +330,7 @@ def refresh_card_links():
         path = match.group(1)
         digest = hashlib.sha256((OUT.parent / path).read_bytes()).hexdigest()[:12]
         return f"{path}?v={digest}"
-    content = re.sub(r"(assets/(?:stats|top-langs|activity|streak|recent-activity|activity-updated|profile-views|pin-[A-Za-z0-9-]+)\.svg)(?:\?v=[A-Za-z0-9_-]+)?", version, content)
+    content = re.sub(r"(assets/(?:stats|top-langs|activity|heatmap|streak|recent-activity|activity-updated|profile-views|pin-[A-Za-z0-9-]+)\.svg)(?:\?v=[A-Za-z0-9_-]+)?", version, content)
     # Keep the historical streak service fresh alongside the owned cards.
     streak_version = hashlib.sha256((OUT / "streak.svg").read_bytes() +
                                     dt.datetime.now(dt.timezone.utc).date().isoformat().encode()).hexdigest()[:12]
@@ -356,6 +382,7 @@ def main():
     (OUT / "stats.svg").write_text(stats_card(stats), encoding="utf-8")
     (OUT / "top-langs.svg").write_text(langs_card(langs), encoding="utf-8")
     (OUT / "activity.svg").write_text(activity_card(lifetime_days), encoding="utf-8")
+    (OUT / "heatmap.svg").write_text(heatmap_card(lifetime_days, now.date()), encoding="utf-8")
     (OUT / "streak.svg").write_text(streak_card(lifetime_days), encoding="utf-8")
     (OUT / "recent-activity.svg").write_text(recent_activity_card(days), encoding="utf-8")
     refreshed = now.strftime("%Y-%m-%d %H:%M UTC")
