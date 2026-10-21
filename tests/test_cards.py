@@ -3,6 +3,8 @@
 import datetime as dt
 import importlib.util
 import unittest
+import tempfile
+from unittest.mock import patch
 import xml.etree.ElementTree as ET
 from pathlib import Path
 
@@ -33,6 +35,19 @@ class CardTests(unittest.TestCase):
         self.assertIn('.fade { opacity: 1;',svg)
         self.assertIn('prefers-reduced-motion: reduce',svg)
         self.assertIn('animation: none;',svg)
+
+    def test_external_streak_cache_changes_when_contributions_change(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root=Path(directory);assets=root/'assets';assets.mkdir()
+            (assets/'streak.svg').write_text('unchanged streak length',encoding='utf-8')
+            (assets/'stats.svg').write_text('20 contributions',encoding='utf-8')
+            (root/'README.md').write_text('<img src="https://streak-stats.demolab.com?user=MoallaMelek&v=old" />',encoding='utf-8')
+            with patch.object(cards,'OUT',assets):
+                cards.refresh_card_links()
+                first=(root/'README.md').read_text(encoding='utf-8')
+                (assets/'stats.svg').write_text('21 contributions',encoding='utf-8')
+                cards.refresh_card_links()
+                self.assertNotEqual(first,(root/'README.md').read_text(encoding='utf-8'))
 
     def test_empty_calendar_remains_a_valid_svg(self):
         ET.fromstring(cards.heatmap_card([],dt.date(2026,10,21)))
