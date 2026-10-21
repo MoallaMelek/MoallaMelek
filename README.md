@@ -154,17 +154,17 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ## GitHub Analytics
 
 <div align="center">
-  <img height="180" src="assets/stats.svg?v=b72c229a99a1" alt="GitHub stats" />
+  <img height="180" src="assets/stats.svg?v=5c2bb9ac6d6b" alt="GitHub stats" />
   <img height="180" src="assets/top-langs.svg?v=79258a720c6c" alt="Most used languages" />
 </div>
 
 <div align="center">
-  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=5edda99a49e2" alt="GitHub streak" />
+  <img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=efc7549caf4b" alt="GitHub streak" />
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=841c68026174" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=1bde5b6f424f" alt="Activity data last refreshed" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=448bc7330714" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=045d33b7df1a" alt="Activity data last refreshed" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
