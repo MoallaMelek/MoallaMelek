@@ -13,16 +13,16 @@
 <text x="25" y="35" class="title">Most Used Languages</text>
 <clipPath id="bar"><rect x="25" y="55" width="330" height="8" rx="4"/></clipPath><g clip-path="url(#bar)">
 <rect x="25.00" y="55" width="140.47" height="8" fill="#3572A5"/>
-<rect x="164.97" y="55" width="55.79" height="8" fill="#f1e05a"/>
-<rect x="220.26" y="55" width="37.14" height="8" fill="#4F5D95"/>
-<rect x="256.90" y="55" width="34.47" height="8" fill="#e34c26"/>
-<rect x="290.87" y="55" width="29.72" height="8" fill="#663399"/>
-<rect x="320.09" y="55" width="26.82" height="8" fill="#3178c6"/>
+<rect x="164.97" y="55" width="55.76" height="8" fill="#f1e05a"/>
+<rect x="220.23" y="55" width="37.12" height="8" fill="#4F5D95"/>
+<rect x="256.85" y="55" width="34.45" height="8" fill="#e34c26"/>
+<rect x="290.81" y="55" width="29.71" height="8" fill="#663399"/>
+<rect x="320.01" y="55" width="26.90" height="8" fill="#3178c6"/>
 <rect x="346.41" y="55" width="5.92" height="8" fill="#00B4AB"/>
-<rect x="351.82" y="55" width="1.71" height="8" fill="#DA5B0B"/>
+<rect x="351.83" y="55" width="1.71" height="8" fill="#DA5B0B"/>
 </g>
 <g class="fade" style="animation-delay:150ms"><circle cx="30" cy="86" r="5" fill="#3572A5"/><text x="41" y="90" class="label">Python <tspan class="muted">42.4%</tspan></text></g>
-<g class="fade" style="animation-delay:250ms"><circle cx="200" cy="86" r="5" fill="#f1e05a"/><text x="211" y="90" class="label">JavaScript <tspan class="muted">16.8%</tspan></text></g>
+<g class="fade" style="animation-delay:250ms"><circle cx="200" cy="86" r="5" fill="#f1e05a"/><text x="211" y="90" class="label">JavaScript <tspan class="muted">16.7%</tspan></text></g>
 <g class="fade" style="animation-delay:350ms"><circle cx="30" cy="116" r="5" fill="#4F5D95"/><text x="41" y="120" class="label">PHP <tspan class="muted">11.1%</tspan></text></g>
 <g class="fade" style="animation-delay:450ms"><circle cx="200" cy="116" r="5" fill="#e34c26"/><text x="211" y="120" class="label">HTML <tspan class="muted">10.3%</tspan></text></g>
 <g class="fade" style="animation-delay:550ms"><circle cx="30" cy="146" r="5" fill="#663399"/><text x="41" y="150" class="label">CSS <tspan class="muted">8.9%</tspan></text></g>
