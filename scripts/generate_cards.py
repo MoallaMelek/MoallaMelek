@@ -111,8 +111,9 @@ def frame(width, height, body, title=None):
   .label {{ font-size: 14px; fill: {TEXT}; }}
   .value {{ font-size: 14px; font-weight: 700; fill: {TEXT}; }}
   .muted {{ font-size: 12px; fill: {MUTED}; }}
-  .fade {{ opacity: 0; animation: fade .5s ease-in-out forwards; }}
-  @keyframes fade {{ to {{ opacity: 1; }} }}
+  .fade {{ opacity: 1; animation: fade .5s ease-in-out backwards; }}
+  @keyframes fade {{ from {{ opacity: 0; }} to {{ opacity: 1; }} }}
+  @media (prefers-reduced-motion: reduce) {{ .fade {{ animation: none; }} }}
 </style>
 <rect x="0.5" y="0.5" rx="10" width="{width - 1}" height="{height - 1}" fill="{BG}" stroke="{BORDER}"/>
 {head}

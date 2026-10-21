@@ -28,6 +28,12 @@ class CardTests(unittest.TestCase):
         self.assertIn('2026-10-20: 3 contributions',cards.heatmap_card(days,dt.date(2026,10,21)))
         self.assertIn('3 contributions since Sep 26, 2026',cards.activity_card(days))
 
+    def test_card_content_is_visible_without_animation_and_respects_reduced_motion(self):
+        svg=cards.frame(100,50,'<text class="fade">Visible</text>')
+        self.assertIn('.fade { opacity: 1;',svg)
+        self.assertIn('prefers-reduced-motion: reduce',svg)
+        self.assertIn('animation: none;',svg)
+
     def test_empty_calendar_remains_a_valid_svg(self):
         ET.fromstring(cards.heatmap_card([],dt.date(2026,10,21)))
 
