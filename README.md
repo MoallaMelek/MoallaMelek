@@ -163,7 +163,6 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/heatmap.svg?v=335f2d2aea75" alt="Contribution heatmap for the last 365 days — actual GitHub contributions by UTC date" /></a>
   <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=42927d0f69de" alt="Contribution activity graph — open the live contribution calendar" /></a>
   <img width="100%" src="assets/activity-updated.svg?v=5c7403fa309a" alt="Activity data last refreshed" />
 </div>
