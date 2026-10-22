@@ -153,6 +153,8 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 ## GitHub Analytics
 
+[Live contributions](https://github.com/MoallaMelek?tab=overview) · [Refresh workflow](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml) · [Activity snapshot](assets/activity-data.json)
+
 <div align="center">
   <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/stats.svg?v=ec85611081cc" alt="GitHub stats — open repositories" /></a>
   <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/top-langs.svg?v=b0f910c6c8f7" alt="Most used languages — explore repositories" /></a>
