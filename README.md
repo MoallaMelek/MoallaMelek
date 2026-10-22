@@ -156,17 +156,17 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 [Live contributions](https://github.com/MoallaMelek?tab=overview) · [Refresh workflow](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml) · [Activity snapshot](assets/activity-data.json)
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/stats.svg?v=ec85611081cc" alt="GitHub stats — open repositories" /></a>
+  <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/stats.svg?v=e9e80bb9c26e" alt="GitHub stats — open repositories" /></a>
   <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/top-langs.svg?v=b0f910c6c8f7" alt="Most used languages — explore repositories" /></a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=b6267e2ba06c" alt="GitHub contribution streak — open live calendar" /></a>
+  <a href="https://github.com/MoallaMelek?tab=overview"><img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=0edbf0a5694c" alt="GitHub contribution streak — open live calendar" /></a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=16b3708ba886" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=8d8e0ff53696" alt="Timestamp of the most recent contribution activity snapshot" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=ad65735f3375" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=4ef72abcb2ee" alt="Timestamp of the most recent contribution activity snapshot" />
 </div>
 
 [![Activity refresh](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
