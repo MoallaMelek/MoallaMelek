@@ -20,6 +20,8 @@
 
 ---
 
+[About](#about-me) · [Projects](#featured-projects) · [Tech stack](#tech-stack) · [Certifications](#professional-learning--certifications) · [Analytics](#github-analytics) · [Contact](#contact)
+
 ## About Me
 
 I am **Melek Moalla**, an **AI engineering student at ESPRIT in Tunisia**, building projects in machine learning, deep learning, computer vision, reinforcement learning, and software engineering.
