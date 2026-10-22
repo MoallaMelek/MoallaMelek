@@ -192,7 +192,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 <div align="center">
 
 [![GitHub](https://img.shields.io/badge/GitHub-MoallaMelek-181717?style=for-the-badge&logo=github)](https://github.com/MoallaMelek)
-[![Email](https://img.shields.io/badge/Email-moalla.melek09@gmail.com-2563EB?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moalla.melek09@gmail.com)
+[![Email Melek Moalla](https://img.shields.io/badge/Email-moalla.melek09@gmail.com-2563EB?style=for-the-badge&logo=gmail&logoColor=white)](mailto:moalla.melek09@gmail.com)
 
 <img width="100%" src="https://capsule-render.vercel.app/api?type=waving&height=100&section=footer&color=0:0D1117,35:111827,70:1F2937,100:2563EB" alt="" />
 
