@@ -155,7 +155,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 <div align="center">
   <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/stats.svg?v=ec85611081cc" alt="GitHub stats — open repositories" /></a>
-  <img height="180" src="assets/top-langs.svg?v=b0f910c6c8f7" alt="Most used languages" />
+  <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/top-langs.svg?v=b0f910c6c8f7" alt="Most used languages — explore repositories" /></a>
 </div>
 
 <div align="center">
