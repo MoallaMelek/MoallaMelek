@@ -74,7 +74,7 @@ I care about systems that are technically credible *and* actually usable: clean 
 
 <div align="center">
 
-[![My Skills](https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn,opencv,fastapi,django,react,ts,js,flutter,dart,redis,postgres,mysql,firebase,docker,git,github,vscode&perline=10&theme=dark)](https://skillicons.dev)
+[![Technology stack: Python, PyTorch, TensorFlow, scikit-learn, OpenCV, FastAPI, Django, React, TypeScript, JavaScript, Flutter, Dart, Redis, PostgreSQL, MySQL, Firebase, Docker, Git, GitHub and VS Code](https://skillicons.dev/icons?i=python,pytorch,tensorflow,sklearn,opencv,fastapi,django,react,ts,js,flutter,dart,redis,postgres,mysql,firebase,docker,git,github,vscode&perline=10&theme=dark)](https://skillicons.dev)
 
 </div>
 
