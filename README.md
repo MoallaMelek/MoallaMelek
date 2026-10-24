@@ -10,7 +10,7 @@
 [![Profile views — hourly snapshot](assets/profile-views.svg?v=ea28a3fcdbfb)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
 [![GitHub followers — view follower list](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
 [![AI engineering student — read about me](https://img.shields.io/badge/Role-AI%20Engineering%20Student-2563EB?style=for-the-badge)](#about-me)
-[![Full-Stack AI Developer](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
+[![Full-stack AI developer — explore projects](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
 
 
 <!-- Komarev records requests through GitHub; the visible badge is a daily snapshot. -->
