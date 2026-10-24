@@ -173,7 +173,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 [![Profile cards refresh status](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
 
-<sub>Activity, streaks, stats, languages, project cards and profile views refresh hourly and after profile updates. Contributions use UTC dates; today can still be completed without resetting the current streak. [Live contribution calendar](https://github.com/MoallaMelek?tab=overview) · [Snapshot data](assets/activity-data.json). GitHub may take time to count new commits. Profile views retain the last good value if the counter is unavailable.</sub>
+<sub>Activity, streaks, stats, languages, project cards and profile views refresh hourly and after profile updates. Contributions use UTC dates; today can still be completed without resetting the current streak. [Live contribution calendar](https://github.com/MoallaMelek?tab=overview) · [Downloadable snapshot data (JSON)](assets/activity-data.json). GitHub may take time to count new commits. Profile views retain the last good value if the counter is unavailable.</sub>
 
 ---
 
