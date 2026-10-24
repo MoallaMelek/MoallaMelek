@@ -20,7 +20,7 @@
 
 ---
 
-[About](#about-me) · [Projects](#featured-projects) · [Tech stack](#tech-stack) · [Certifications](#professional-learning--certifications) · [Analytics](#github-analytics) · [Contact](#contact)
+[About me](#about-me) · [Featured projects](#featured-projects) · [Tech stack](#tech-stack) · [Certifications](#professional-learning--certifications) · [Analytics](#github-analytics) · [Contact](#contact)
 
 ## About Me
 
