@@ -7,7 +7,7 @@
 [![Portfolio — visit Melek Moalla’s website](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://melek-moalla.vercel.app)
 [![Download Melek Moalla’s CV as PDF](https://img.shields.io/badge/CV-Download%20PDF-2563EB?style=for-the-badge)](https://melek-moalla.vercel.app/Melek-Moalla-CV.pdf)
 [![LinkedIn — connect with Melek Moalla](https://img.shields.io/badge/LinkedIn-Melek%20Moalla-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/melek-moalla-14a5a4357)
-[![Profile views — hourly snapshot](assets/profile-views.svg?v=ea28a3fcdbfb)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
+[![Profile views — hourly snapshot](assets/profile-views.svg?v=a7e121fa1cee)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
 [![GitHub followers — view follower list](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
 [![AI engineering student — read about me](https://img.shields.io/badge/Role-AI%20Engineering%20Student-2563EB?style=for-the-badge)](#about-me)
 [![Full-stack AI developer — explore projects](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
@@ -168,7 +168,7 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 
 <div align="center">
   <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=6f9160339a27" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=e8f0d0bbf49d" alt="Timestamp of the most recent contribution activity snapshot" />
+  <img width="100%" src="assets/activity-updated.svg?v=5b438f38d62c" alt="Timestamp of the most recent contribution activity snapshot" />
 </div>
 
 [![Profile cards refresh status](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
