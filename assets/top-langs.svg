@@ -12,12 +12,12 @@
 <rect x="0.5" y="0.5" rx="10" width="379" height="224" fill="#0D1117" stroke="#30363D"/>
 <text x="25" y="35" class="title">Most Used Languages</text>
 <clipPath id="bar"><rect x="25" y="55" width="330" height="8" rx="4"/></clipPath><g clip-path="url(#bar)">
-<rect x="25.00" y="55" width="129.21" height="8" fill="#3572A5"/>
-<rect x="153.71" y="55" width="56.15" height="8" fill="#f1e05a"/>
-<rect x="209.36" y="55" width="42.18" height="8" fill="#3178c6"/>
-<rect x="251.04" y="55" width="33.24" height="8" fill="#4F5D95"/>
-<rect x="283.78" y="55" width="32.99" height="8" fill="#e34c26"/>
-<rect x="316.27" y="55" width="31.51" height="8" fill="#663399"/>
+<rect x="25.00" y="55" width="129.23" height="8" fill="#3572A5"/>
+<rect x="153.73" y="55" width="56.15" height="8" fill="#f1e05a"/>
+<rect x="209.37" y="55" width="42.18" height="8" fill="#3178c6"/>
+<rect x="251.05" y="55" width="33.24" height="8" fill="#4F5D95"/>
+<rect x="283.79" y="55" width="32.99" height="8" fill="#e34c26"/>
+<rect x="316.28" y="55" width="31.51" height="8" fill="#663399"/>
 <rect x="347.29" y="55" width="5.34" height="8" fill="#00B4AB"/>
 <rect x="352.13" y="55" width="1.58" height="8" fill="#DA5B0B"/>
 </g>
