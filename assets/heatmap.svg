@@ -11,7 +11,6 @@
 </style>
 <rect x="0.5" y="0.5" rx="10" width="899" height="179" fill="#0D1117" stroke="#30363D"/>
 <text x="25" y="35" class="title">Contribution Calendar · last 365 days</text>
-<rect data-date="2025-10-29" x="50.0" y="105" width="12.0" height="12" rx="2" fill="#161B22"><title>2025-10-29: 0 contributions</title></rect>
 <rect data-date="2025-10-30" x="50.0" y="120" width="12.0" height="12" rx="2" fill="#161B22"><title>2025-10-30: 0 contributions</title></rect>
 <rect data-date="2025-10-31" x="50.0" y="135" width="12.0" height="12" rx="2" fill="#161B22"><title>2025-10-31: 0 contributions</title></rect>
 <rect data-date="2025-11-01" x="50.0" y="150" width="12.0" height="12" rx="2" fill="#161B22"><title>2025-11-01: 0 contributions</title></rect>
@@ -388,6 +387,7 @@
 <rect data-date="2026-10-26" x="859.4" y="75" width="12.0" height="12" rx="2" fill="#0E4429"><title>2026-10-26: 2 contributions</title></rect>
 <rect data-date="2026-10-27" x="859.4" y="90" width="12.0" height="12" rx="2" fill="#0E4429"><title>2026-10-27: 7 contributions</title></rect>
 <rect data-date="2026-10-28" x="859.4" y="105" width="12.0" height="12" rx="2" fill="#0E4429"><title>2026-10-28: 9 contributions</title></rect>
+<rect data-date="2026-10-29" x="859.4" y="120" width="12.0" height="12" rx="2" fill="#161B22"><title>2026-10-29: 0 contributions</title></rect>
 <text x="10" y="85" class="muted">Mon</text>
 <text x="10" y="115" class="muted">Wed</text>
 <text x="10" y="145" class="muted">Fri</text>
