@@ -39,3 +39,13 @@ class ProfileViewRegressionTests(unittest.TestCase):
     def test_large_count_renders_without_losing_digits(self):
         count = 123456789
         self.assertEqual(views.read_count(views.render_badge(count)), count)
+
+    def test_network_failure_preserves_existing_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "views.svg"
+            before = views.render_badge(42)
+            out.write_text(before, encoding="utf-8")
+            with patch.object(views.urllib.request, "urlopen",
+                              side_effect=urllib.error.URLError("offline")):
+                self.assertFalse(views.refresh(out))
+            self.assertEqual(out.read_text(encoding="utf-8"), before)
