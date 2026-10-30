@@ -13,7 +13,7 @@
 <text x="25" y="35" class="title">GitHub Streak</text>
 <text x="150" y="90" text-anchor="middle" class="value" style="font-size:32px;fill:#7EE787">41</text>
 <text x="150" y="122" text-anchor="middle" class="label">Active days</text>
-<text x="450" y="90" text-anchor="middle" class="value" style="font-size:32px;fill:#7EE787">33</text>
+<text x="450" y="90" text-anchor="middle" class="value" style="font-size:32px;fill:#7EE787">0</text>
 <text x="450" y="122" text-anchor="middle" class="label">Current streak</text>
 <text x="750" y="90" text-anchor="middle" class="value" style="font-size:32px;fill:#7EE787">33</text>
 <text x="750" y="122" text-anchor="middle" class="label">Longest streak</text>
