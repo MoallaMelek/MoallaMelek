@@ -60,3 +60,10 @@ class ActivityRegressionTests(unittest.TestCase):
                   in root.find("s:polyline", NS).get("points").split()]
         self.assertTrue(all(50 <= x <= 875 and 55 <= y <= 235 for x, y in points))
         self.assertIn("1001 contributions", "".join(root.itertext()))
+
+    def test_curve_excludes_dates_before_display_start(self):
+        days = [{"date": "2026-09-25", "contributionCount": 99},
+                {"date": "2026-09-26", "contributionCount": 20}]
+        root = ET.fromstring(cards.activity_card(days))
+        self.assertIn("20 contributions since Sep 26, 2026", "".join(root.itertext()))
+        self.assertEqual(len(root.findall("s:circle", NS)), 1)
