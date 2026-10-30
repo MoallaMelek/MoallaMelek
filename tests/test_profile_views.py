@@ -69,3 +69,14 @@ class ProfileViewRegressionTests(unittest.TestCase):
                 with self.assertRaises(urllib.error.URLError):
                     views.refresh(out)
             self.assertFalse(out.exists())
+
+    def test_successful_refresh_replaces_snapshot_atomically(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "views.svg"
+            out.write_text(views.render_badge(42), encoding="utf-8")
+            response = MagicMock()
+            response.__enter__.return_value.read.return_value = views.render_badge(43).encode()
+            with patch.object(views.urllib.request, "urlopen", return_value=response):
+                self.assertTrue(views.refresh(out))
+            self.assertEqual(views.read_count(out.read_bytes()), 43)
+            self.assertFalse(out.with_suffix(".svg.tmp").exists())
