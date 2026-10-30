@@ -35,3 +35,7 @@ class ProfileViewRegressionTests(unittest.TestCase):
         svg = '<svg xmlns="http://www.w3.org/2000/svg"><title>PROFILE VIEWS: unavailable</title></svg>'
         with self.assertRaisesRegex(ValueError, "numeric view count"):
             views.read_count(svg)
+
+    def test_large_count_renders_without_losing_digits(self):
+        count = 123456789
+        self.assertEqual(views.read_count(views.render_badge(count)), count)
