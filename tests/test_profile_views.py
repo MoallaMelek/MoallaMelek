@@ -60,3 +60,12 @@ class ProfileViewRegressionTests(unittest.TestCase):
             with patch.object(views.urllib.request, "urlopen", return_value=response):
                 self.assertFalse(views.refresh(out))
             self.assertEqual(out.read_text(encoding="utf-8"), before)
+
+    def test_first_refresh_failure_does_not_create_a_badge(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "views.svg"
+            with patch.object(views.urllib.request, "urlopen",
+                              side_effect=urllib.error.URLError("offline")):
+                with self.assertRaises(urllib.error.URLError):
+                    views.refresh(out)
+            self.assertFalse(out.exists())
