@@ -49,3 +49,14 @@ class ProfileViewRegressionTests(unittest.TestCase):
                               side_effect=urllib.error.URLError("offline")):
                 self.assertFalse(views.refresh(out))
             self.assertEqual(out.read_text(encoding="utf-8"), before)
+
+    def test_lower_counter_preserves_existing_snapshot(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "views.svg"
+            before = views.render_badge(42)
+            out.write_text(before, encoding="utf-8")
+            response = MagicMock()
+            response.__enter__.return_value.read.return_value = views.render_badge(41).encode()
+            with patch.object(views.urllib.request, "urlopen", return_value=response):
+                self.assertFalse(views.refresh(out))
+            self.assertEqual(out.read_text(encoding="utf-8"), before)
