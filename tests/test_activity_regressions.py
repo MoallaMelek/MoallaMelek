@@ -78,3 +78,12 @@ class ActivityRegressionTests(unittest.TestCase):
         self.assertEqual(dates.count("2024-02-29"), 1)
         self.assertEqual(dates[-1], "2024-03-01")
         self.assertIn("2024-02-29: 20 contributions", "".join(root.itertext()))
+
+    def test_repository_text_cannot_create_svg_elements(self):
+        repo = {"name": "A & B <script>", "description": "Use <tag> & compare",
+                "primaryLanguage": {"name": "C & C++", "color": "#123456"},
+                "stargazerCount": 0, "forkCount": 0}
+        root = ET.fromstring(cards.pin_card(repo))
+        self.assertIsNone(root.find(".//s:script", NS))
+        self.assertIn("A & B <script>", "".join(root.itertext()))
+        self.assertIn("Use <tag> & compare", "".join(root.itertext()))
