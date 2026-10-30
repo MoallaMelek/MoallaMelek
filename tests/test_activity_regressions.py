@@ -34,3 +34,8 @@ class ActivityRegressionTests(unittest.TestCase):
                 {"date": "2026-10-30", "contributionCount": 20}]
         self.assertEqual(cards.streak_metrics(days, dt.date(2026, 10, 30)),
                          {"current": 1, "longest": 1, "active_days": 1})
+
+    def test_future_only_calendar_has_no_streak(self):
+        days = [{"date": "2026-10-31", "contributionCount": 20}]
+        self.assertEqual(cards.streak_metrics(days, dt.date(2026, 10, 30)),
+                         {"current": 0, "longest": 0, "active_days": 0})
