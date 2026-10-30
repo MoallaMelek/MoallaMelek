@@ -28,3 +28,9 @@ class ActivityRegressionTests(unittest.TestCase):
         result = cards.streak_metrics(days, dt.date(2026, 10, 30))
         self.assertEqual(result["current"], 3)
         self.assertEqual(result["longest"], 3)
+
+    def test_zero_contributions_are_not_active_days(self):
+        days = [{"date": "2026-10-29", "contributionCount": 0},
+                {"date": "2026-10-30", "contributionCount": 20}]
+        self.assertEqual(cards.streak_metrics(days, dt.date(2026, 10, 30)),
+                         {"current": 1, "longest": 1, "active_days": 1})
