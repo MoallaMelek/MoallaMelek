@@ -30,3 +30,8 @@ class ProfileViewRegressionTests(unittest.TestCase):
     def test_missing_title_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "numeric view count"):
             views.read_count('<svg xmlns="http://www.w3.org/2000/svg"/>')
+
+    def test_unavailable_counter_is_rejected(self):
+        svg = '<svg xmlns="http://www.w3.org/2000/svg"><title>PROFILE VIEWS: unavailable</title></svg>'
+        with self.assertRaisesRegex(ValueError, "numeric view count"):
+            views.read_count(svg)
