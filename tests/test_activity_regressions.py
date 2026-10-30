@@ -1,0 +1,23 @@
+"""Regression coverage for calendar data and unchanged activity-card rendering."""
+
+import datetime as dt
+import importlib.util
+import unittest
+import xml.etree.ElementTree as ET
+from pathlib import Path
+
+SPEC = importlib.util.spec_from_file_location(
+    "activity_cards", Path(__file__).parents[1] / "scripts" / "generate_cards.py"
+)
+cards = importlib.util.module_from_spec(SPEC)
+SPEC.loader.exec_module(cards)
+NS = {"s": "http://www.w3.org/2000/svg"}
+
+
+class ActivityRegressionTests(unittest.TestCase):
+
+    def test_leap_day_keeps_a_continuous_streak(self):
+        days = [{"date": date, "contributionCount": 1}
+                for date in ("2024-02-28", "2024-02-29", "2024-03-01")]
+        self.assertEqual(cards.streak_metrics(days, dt.date(2024, 3, 1)),
+                         {"current": 3, "longest": 3, "active_days": 3})
