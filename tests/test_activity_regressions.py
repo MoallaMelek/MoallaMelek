@@ -43,3 +43,11 @@ class ActivityRegressionTests(unittest.TestCase):
     def test_empty_history_has_zero_metrics(self):
         self.assertEqual(cards.streak_metrics([], dt.date(2026, 10, 30)),
                          {"current": 0, "longest": 0, "active_days": 0})
+
+    def test_zero_activity_curve_stays_on_baseline(self):
+        days = [{"date": "2026-09-26", "contributionCount": 0},
+                {"date": "2026-09-27", "contributionCount": 0}]
+        root = ET.fromstring(cards.activity_card(days))
+        points = root.find("s:polyline", NS).get("points").split()
+        self.assertEqual(points, ["50.0,235.0", "875.0,235.0"])
+        self.assertIn("0 contributions", "".join(root.itertext()))
