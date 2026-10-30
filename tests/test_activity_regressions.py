@@ -39,3 +39,7 @@ class ActivityRegressionTests(unittest.TestCase):
         days = [{"date": "2026-10-31", "contributionCount": 20}]
         self.assertEqual(cards.streak_metrics(days, dt.date(2026, 10, 30)),
                          {"current": 0, "longest": 0, "active_days": 0})
+
+    def test_empty_history_has_zero_metrics(self):
+        self.assertEqual(cards.streak_metrics([], dt.date(2026, 10, 30)),
+                         {"current": 0, "longest": 0, "active_days": 0})
