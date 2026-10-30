@@ -67,3 +67,14 @@ class ActivityRegressionTests(unittest.TestCase):
         root = ET.fromstring(cards.activity_card(days))
         self.assertIn("20 contributions since Sep 26, 2026", "".join(root.itertext()))
         self.assertEqual(len(root.findall("s:circle", NS)), 1)
+
+    def test_rolling_calendar_includes_leap_day_once(self):
+        root = ET.fromstring(cards.heatmap_card(
+            [{"date": "2024-02-29", "contributionCount": 20}],
+            dt.date(2024, 3, 1)))
+        cells = [node for node in root.findall("s:rect", NS) if node.get("data-date")]
+        dates = [node.get("data-date") for node in cells]
+        self.assertEqual(len(dates), 365)
+        self.assertEqual(dates.count("2024-02-29"), 1)
+        self.assertEqual(dates[-1], "2024-03-01")
+        self.assertIn("2024-02-29: 20 contributions", "".join(root.itertext()))
