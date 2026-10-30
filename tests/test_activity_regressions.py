@@ -21,3 +21,10 @@ class ActivityRegressionTests(unittest.TestCase):
                 for date in ("2024-02-28", "2024-02-29", "2024-03-01")]
         self.assertEqual(cards.streak_metrics(days, dt.date(2024, 3, 1)),
                          {"current": 3, "longest": 3, "active_days": 3})
+
+    def test_unordered_calendar_does_not_break_a_streak(self):
+        days = [{"date": date, "contributionCount": 2}
+                for date in ("2026-10-30", "2026-10-28", "2026-10-29")]
+        result = cards.streak_metrics(days, dt.date(2026, 10, 30))
+        self.assertEqual(result["current"], 3)
+        self.assertEqual(result["longest"], 3)
