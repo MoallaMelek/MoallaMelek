@@ -51,3 +51,12 @@ class ActivityRegressionTests(unittest.TestCase):
         points = root.find("s:polyline", NS).get("points").split()
         self.assertEqual(points, ["50.0,235.0", "875.0,235.0"])
         self.assertIn("0 contributions", "".join(root.itertext()))
+
+    def test_large_contribution_peak_stays_inside_chart(self):
+        days = [{"date": "2026-09-26", "contributionCount": 1001},
+                {"date": "2026-09-27", "contributionCount": 0}]
+        root = ET.fromstring(cards.activity_card(days))
+        points = [tuple(map(float, point.split(","))) for point
+                  in root.find("s:polyline", NS).get("points").split()]
+        self.assertTrue(all(50 <= x <= 875 and 55 <= y <= 235 for x, y in points))
+        self.assertIn("1001 contributions", "".join(root.itertext()))
