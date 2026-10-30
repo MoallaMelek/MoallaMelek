@@ -19,3 +19,6 @@ class ProfileViewRegressionTests(unittest.TestCase):
     def test_numeric_svg_badge_is_read(self):
         svg = '<svg xmlns="http://www.w3.org/2000/svg"><title>PROFILE VIEWS: 1234</title></svg>'
         self.assertEqual(views.read_count(svg), 1234)
+
+    def test_zero_views_is_a_valid_count(self):
+        self.assertEqual(views.read_count(views.render_badge(0)), 0)
