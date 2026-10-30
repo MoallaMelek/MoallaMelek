@@ -26,3 +26,7 @@ class ProfileViewRegressionTests(unittest.TestCase):
     def test_html_error_page_is_rejected(self):
         with self.assertRaisesRegex(ValueError, "Expected an SVG"):
             views.read_count("<html><title>PROFILE VIEWS: 20</title></html>")
+
+    def test_missing_title_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "numeric view count"):
+            views.read_count('<svg xmlns="http://www.w3.org/2000/svg"/>')
