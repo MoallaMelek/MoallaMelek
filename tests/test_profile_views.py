@@ -22,3 +22,7 @@ class ProfileViewRegressionTests(unittest.TestCase):
 
     def test_zero_views_is_a_valid_count(self):
         self.assertEqual(views.read_count(views.render_badge(0)), 0)
+
+    def test_html_error_page_is_rejected(self):
+        with self.assertRaisesRegex(ValueError, "Expected an SVG"):
+            views.read_count("<html><title>PROFILE VIEWS: 20</title></html>")
