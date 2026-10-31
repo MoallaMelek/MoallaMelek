@@ -183,3 +183,10 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertEqual(stats["stars"], 4)
         self.generate(check)
 
+    def test_ignored_languages_do_not_enter_the_card(self):
+        def check(root, out):
+            text = "".join(ET.fromstring((out / "top-langs.svg").read_text()).itertext())
+            self.assertNotIn("Hack", text)
+            self.assertNotIn("9999", text)
+        self.generate(check)
+
