@@ -139,3 +139,8 @@ class GeneratorPipelineTests(unittest.TestCase):
             with self.assertRaisesRegex(RuntimeError, "rate limited"):
                 cards.graphql("query { user { id } }", {})
 
+    def test_history_requests_each_calendar_year_once(self):
+        _, requests = self.history()
+        years = [dt.datetime.fromisoformat(call.args[1]["from"]).year for call in requests]
+        self.assertEqual(years, [2024, 2025, 2026])
+
