@@ -126,3 +126,9 @@ class GeneratorPipelineTests(unittest.TestCase):
         self.assertEqual(sent.full_url, "https://api.github.com/graphql")
         self.assertEqual(json.loads(sent.data), {"query": query, "variables": variables})
 
+    def test_graphql_request_has_a_timeout(self):
+        with patch.object(cards.urllib.request, "urlopen",
+                          return_value=io.BytesIO(b'{"data": {}}')) as request:
+            cards.graphql("query { viewer { login } }", {})
+        self.assertEqual(request.call_args.kwargs["timeout"], 30)
+
