@@ -218,3 +218,12 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertFalse(list(out.glob("pin-*.svg")))
         self.generate(check, repositories=[])
 
+    def test_snapshot_tracks_twenty_contributions_and_two_day_streak(self):
+        def check(root, out):
+            data = json.loads((out / "activity-data.json").read_text())
+            self.assertEqual(data["days"], [day("2026-10-30", 20), day("2026-10-31", 20)])
+            self.assertEqual(data["streak"], {"current": 2, "longest": 2, "active_days": 2})
+            self.assertEqual(data["stats"]["commits"], 432)
+            self.assertIn("Current streak", (out / "streak.svg").read_text())
+        self.generate(check)
+
