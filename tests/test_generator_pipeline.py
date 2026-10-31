@@ -117,3 +117,12 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertEqual(cards.graphql("query Test { user { name } }", {}),
                              body["data"])
 
+    def test_graphql_serializes_query_and_variables(self):
+        query, variables = "query($login: String!) { user(login: $login) { id } }", {"login": "Melek"}
+        with patch.object(cards.urllib.request, "urlopen",
+                          return_value=io.BytesIO(b'{"data": {}}')) as request:
+            cards.graphql(query, variables)
+        sent = request.call_args.args[0]
+        self.assertEqual(sent.full_url, "https://api.github.com/graphql")
+        self.assertEqual(json.loads(sent.data), {"query": query, "variables": variables})
+
