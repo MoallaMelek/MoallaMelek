@@ -144,3 +144,8 @@ class GeneratorPipelineTests(unittest.TestCase):
         years = [dt.datetime.fromisoformat(call.args[1]["from"]).year for call in requests]
         self.assertEqual(years, [2024, 2025, 2026])
 
+    def test_first_history_request_starts_at_account_creation(self):
+        _, requests = self.history()
+        self.assertEqual(requests[0].args[1]["from"], "2024-06-15T09:30:00+00:00")
+        self.assertEqual(requests[0].args[1]["to"], "2024-12-31T23:59:59+00:00")
+
