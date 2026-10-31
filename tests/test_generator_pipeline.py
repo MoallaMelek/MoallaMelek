@@ -149,3 +149,8 @@ class GeneratorPipelineTests(unittest.TestCase):
         self.assertEqual(requests[0].args[1]["from"], "2024-06-15T09:30:00+00:00")
         self.assertEqual(requests[0].args[1]["to"], "2024-12-31T23:59:59+00:00")
 
+    def test_current_year_request_ends_at_now(self):
+        _, requests = self.history()
+        self.assertEqual(requests[-1].args[1]["from"], "2026-01-01T00:00:00+00:00")
+        self.assertEqual(requests[-1].args[1]["to"], NOW.isoformat())
+
