@@ -176,3 +176,10 @@ class GeneratorPipelineTests(unittest.TestCase):
                 cards.main()
         request.assert_not_called()
 
+    def test_profile_repository_is_excluded_from_project_stats(self):
+        def check(root, out):
+            stats = json.loads((out / "activity-data.json").read_text())["stats"]
+            self.assertEqual(stats["repos"], 2)
+            self.assertEqual(stats["stars"], 4)
+        self.generate(check)
+
