@@ -210,3 +210,11 @@ class GeneratorPipelineTests(unittest.TestCase):
                              ["pin-Reward-Goblin.svg"])
         self.generate(check)
 
+    def test_empty_repository_list_still_generates_valid_cards(self):
+        def check(root, out):
+            self.assertEqual(json.loads((out / "activity-data.json").read_text())["stats"]["repos"], 0)
+            for path in out.glob("*.svg"):
+                ET.fromstring(path.read_text(encoding="utf-8"))
+            self.assertFalse(list(out.glob("pin-*.svg")))
+        self.generate(check, repositories=[])
+
