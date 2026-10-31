@@ -190,3 +190,10 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertNotIn("9999", text)
         self.generate(check)
 
+    def test_language_percentages_use_combined_repository_sizes(self):
+        def check(root, out):
+            text = "".join(ET.fromstring((out / "top-langs.svg").read_text()).itertext())
+            self.assertIn("Python 80.0%", text)
+            self.assertIn("JavaScript 20.0%", text)
+        self.generate(check)
+
