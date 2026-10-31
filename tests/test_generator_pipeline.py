@@ -165,3 +165,8 @@ class GeneratorPipelineTests(unittest.TestCase):
             day("2025-01-01", 5), day("2025-12-31", 6),
             day("2026-10-30", 20), day("2026-10-31", 20)])
 
+    def test_aggregated_history_preserves_year_boundary_streak(self):
+        (_, days), _ = self.history()
+        self.assertEqual(cards.streak_metrics(days, NOW.date()),
+                         {"current": 2, "longest": 2, "active_days": 6})
+
