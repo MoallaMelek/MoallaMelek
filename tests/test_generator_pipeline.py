@@ -204,3 +204,9 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertEqual(data["user"], cards.USER)
         self.generate(check)
 
+    def test_only_existing_pinned_repositories_get_cards(self):
+        def check(root, out):
+            self.assertEqual([path.name for path in out.glob("pin-*.svg")],
+                             ["pin-Reward-Goblin.svg"])
+        self.generate(check)
+
