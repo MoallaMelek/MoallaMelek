@@ -235,3 +235,11 @@ class GeneratorPipelineTests(unittest.TestCase):
                 self.assertIn(f"assets/{name}.svg?v={digest}", readme)
         self.generate(check)
 
+    def test_full_generation_changes_only_image_version_values_in_readme(self):
+        def check(root, out):
+            def unversion(text):
+                return cards.re.sub(r"([?&]v=)[A-Za-z0-9_-]+", r"\1VERSION", text)
+            self.assertEqual(unversion((root / "README.md").read_text(encoding="utf-8")),
+                             unversion(README))
+        self.generate(check)
+
