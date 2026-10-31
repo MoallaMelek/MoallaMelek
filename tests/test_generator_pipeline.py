@@ -158,3 +158,10 @@ class GeneratorPipelineTests(unittest.TestCase):
         (commits, _), _ = self.history()
         self.assertEqual(commits, 56)
 
+    def test_history_excludes_padding_outside_each_requested_year(self):
+        (_, days), _ = self.history()
+        self.assertEqual(days, [
+            day("2024-06-15", 2), day("2024-12-31", 3),
+            day("2025-01-01", 5), day("2025-12-31", 6),
+            day("2026-10-30", 20), day("2026-10-31", 20)])
+
