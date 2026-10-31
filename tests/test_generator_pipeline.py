@@ -170,3 +170,9 @@ class GeneratorPipelineTests(unittest.TestCase):
         self.assertEqual(cards.streak_metrics(days, NOW.date()),
                          {"current": 2, "longest": 2, "active_days": 6})
 
+    def test_main_without_token_stops_before_network_or_output(self):
+        with patch.object(cards, "TOKEN", None), patch.object(cards, "graphql") as request:
+            with self.assertRaisesRegex(SystemExit, "Set GH_TOKEN or GITHUB_TOKEN"):
+                cards.main()
+        request.assert_not_called()
+
