@@ -132,3 +132,10 @@ class GeneratorPipelineTests(unittest.TestCase):
             cards.graphql("query { viewer { login } }", {})
         self.assertEqual(request.call_args.kwargs["timeout"], 30)
 
+    def test_graphql_does_not_accept_partial_data_with_errors(self):
+        body = {"data": {"user": None}, "errors": [{"message": "rate limited"}]}
+        with patch.object(cards.urllib.request, "urlopen",
+                          return_value=io.BytesIO(json.dumps(body).encode())):
+            with self.assertRaisesRegex(RuntimeError, "rate limited"):
+                cards.graphql("query { user { id } }", {})
+
