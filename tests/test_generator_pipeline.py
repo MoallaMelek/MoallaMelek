@@ -227,3 +227,11 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertIn("Current streak", (out / "streak.svg").read_text())
         self.generate(check)
 
+    def test_pipeline_readme_versions_match_generated_svg_bytes(self):
+        def check(root, out):
+            readme = (root / "README.md").read_text(encoding="utf-8")
+            for name in ("stats", "activity", "activity-updated"):
+                digest = cards.hashlib.sha256((out / f"{name}.svg").read_bytes()).hexdigest()[:12]
+                self.assertIn(f"assets/{name}.svg?v={digest}", readme)
+        self.generate(check)
+
