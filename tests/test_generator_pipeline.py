@@ -197,3 +197,10 @@ class GeneratorPipelineTests(unittest.TestCase):
             self.assertIn("JavaScript 20.0%", text)
         self.generate(check)
 
+    def test_snapshot_records_user_and_utc_refresh_time(self):
+        def check(root, out):
+            data = json.loads((out / "activity-data.json").read_text())
+            self.assertEqual(data["updated_at"], NOW.isoformat())
+            self.assertEqual(data["user"], cards.USER)
+        self.generate(check)
+
