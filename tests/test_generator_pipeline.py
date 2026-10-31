@@ -154,3 +154,7 @@ class GeneratorPipelineTests(unittest.TestCase):
         self.assertEqual(requests[-1].args[1]["from"], "2026-01-01T00:00:00+00:00")
         self.assertEqual(requests[-1].args[1]["to"], NOW.isoformat())
 
+    def test_lifetime_commits_sum_all_years(self):
+        (commits, _), _ = self.history()
+        self.assertEqual(commits, 56)
+
