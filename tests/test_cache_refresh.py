@@ -55,3 +55,7 @@ class CacheRefreshTests(unittest.TestCase):
         self.assertIn('alt="Activité — مُلخّص"', result)
         self.assertIn('width="100%"', result)
 
+    def test_unrelated_external_image_is_not_versioned(self):
+        original = '<img src="https://example.com/chart.svg?v=keep" />'
+        self.assertEqual(self.refresh(original), original)
+
