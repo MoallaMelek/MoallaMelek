@@ -50,3 +50,8 @@ class CacheRefreshTests(unittest.TestCase):
         self.assertEqual(result.splitlines(),
                          [f"assets/activity.svg?v={self.digest('activity')}"] * 2)
 
+    def test_unicode_alt_text_is_unchanged(self):
+        result = self.refresh('<img width="100%" src="assets/activity.svg?v=old" alt="Activité — مُلخّص" />')
+        self.assertIn('alt="Activité — مُلخّص"', result)
+        self.assertIn('width="100%"', result)
+
