@@ -163,12 +163,12 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=05e4050a9cdc" alt="GitHub contribution streak — open live calendar" /></a>
+  <a href="https://github.com/MoallaMelek?tab=overview"><img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=4d219b6d3781" alt="GitHub contribution streak — open live calendar" /></a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=66e6d7987e7f" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=d0b8f49718e5" alt="Timestamp of the most recent contribution activity snapshot" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=f42543997b29" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=4b4da0da1f0c" alt="Timestamp of the most recent contribution activity snapshot" />
 </div>
 
 [![Profile cards refresh status](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
