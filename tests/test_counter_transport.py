@@ -64,3 +64,10 @@ class CounterTransportTests(unittest.TestCase):
             self.assertEqual(request.call_args.kwargs["timeout"], 20)
             response.__enter__.return_value.read.assert_called_once_with(32769)
 
+    def test_snapshot_request_uses_its_own_user_agent(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.object(views.urllib.request, "urlopen", return_value=self.valid_response()) as request:
+                views.refresh(Path(directory) / "views.svg")
+            self.assertEqual(request.call_args.args[0].get_header("User-agent"),
+                             "profile-views-snapshot/1.0")
+
