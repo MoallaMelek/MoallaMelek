@@ -73,3 +73,17 @@ class CacheRefreshTests(unittest.TestCase):
         self.assertNotEqual(self.refresh(source),
                             self.refresh(source, {"streak.svg": "new streak"}))
 
+    def test_missing_card_leaves_readme_unchanged(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            out = root / "assets"
+            out.mkdir()
+            (out / "activity.svg").write_text("activity", encoding="utf-8")
+            path = root / "README.md"
+            original = "assets/activity.svg?v=old\nassets/heatmap.svg?v=old"
+            path.write_text(original, encoding="utf-8")
+            with patch.object(cards, "OUT", out):
+                with self.assertRaises(FileNotFoundError):
+                    cards.refresh_card_links()
+            self.assertEqual(path.read_text(encoding="utf-8"), original)
+
