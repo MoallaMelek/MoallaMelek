@@ -48,3 +48,11 @@ class CounterTransportTests(unittest.TestCase):
                 self.assertTrue(views.refresh(out))
             self.assertEqual(views.read_count(out.read_bytes()), 70)
 
+    def test_equal_count_is_a_successful_refresh(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "views.svg"
+            out.write_text(views.render_badge(70), encoding="utf-8")
+            with patch.object(views.urllib.request, "urlopen", return_value=self.valid_response()):
+                self.assertTrue(views.refresh(out))
+            self.assertEqual(views.read_count(out.read_bytes()), 70)
+
