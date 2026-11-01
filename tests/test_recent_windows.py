@@ -45,3 +45,6 @@ class RecentWindowTests(unittest.TestCase):
     def test_seven_days_ago_is_outside_week(self):
         self.assert_window([(7, 9)], [0, 0, 9], 1)
 
+    def test_thirty_days_ago_is_in_month(self):
+        self.assert_window([(30, 11)], [0, 0, 11], 1)
+
