@@ -57,3 +57,6 @@ class RecentWindowTests(unittest.TestCase):
     def test_zero_dates_are_not_active(self):
         self.assert_window([(0, 30), (1, 0), (2, 1)], [30, 31, 31], 2)
 
+    def test_sparse_dates_keep_exact_totals(self):
+        self.assert_window([(0, 30), (2, 5), (6, 7), (12, 11)], [30, 42, 53], 4)
+
