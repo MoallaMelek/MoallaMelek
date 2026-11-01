@@ -54,3 +54,6 @@ class RecentWindowTests(unittest.TestCase):
     def test_future_contributions_are_not_counted(self):
         self.assert_window([(-1, 999), (0, 30)], [30, 30, 30], 1)
 
+    def test_zero_dates_are_not_active(self):
+        self.assert_window([(0, 30), (1, 0), (2, 1)], [30, 31, 31], 2)
+
