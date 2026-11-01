@@ -45,3 +45,8 @@ class CacheRefreshTests(unittest.TestCase):
         self.assertIn(f'activity.svg?v={self.digest("activity")}', result)
         self.assertNotIn("legacy_1", result)
 
+    def test_repeated_image_references_receive_the_same_version(self):
+        result = self.refresh("assets/activity.svg?v=one\nassets/activity.svg?v=two")
+        self.assertEqual(result.splitlines(),
+                         [f"assets/activity.svg?v={self.digest('activity')}"] * 2)
+
