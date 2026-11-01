@@ -87,3 +87,18 @@ class CacheRefreshTests(unittest.TestCase):
                     cards.refresh_card_links()
             self.assertEqual(path.read_text(encoding="utf-8"), original)
 
+    def test_external_streak_cache_tracks_utc_date(self):
+        source = '<img src="https://streak-stats.demolab.com?user=Melek&v=old" />'
+
+        class Tomorrow(dt.datetime):
+            @classmethod
+            def now(cls, tz=None):
+                return dt.datetime(2030, 1, 1, tzinfo=dt.timezone.utc)
+
+        before = self.refresh(source)
+        clock = SimpleNamespace(datetime=Tomorrow, date=dt.date,
+                                timezone=dt.timezone, timedelta=dt.timedelta)
+        with patch.object(cards, "dt", clock):
+            after = self.refresh(source)
+        self.assertNotEqual(before, after)
+
