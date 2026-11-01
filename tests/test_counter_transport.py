@@ -41,3 +41,10 @@ class CounterTransportTests(unittest.TestCase):
     def test_empty_counter_title_does_not_replace_snapshot(self):
         self.assert_keeps_snapshot(b'<svg xmlns="http://www.w3.org/2000/svg"><title/></svg>')
 
+    def test_first_success_creates_nested_snapshot_directory(self):
+        with tempfile.TemporaryDirectory() as directory:
+            out = Path(directory) / "nested" / "assets" / "views.svg"
+            with patch.object(views.urllib.request, "urlopen", return_value=self.valid_response()):
+                self.assertTrue(views.refresh(out))
+            self.assertEqual(views.read_count(out.read_bytes()), 70)
+
