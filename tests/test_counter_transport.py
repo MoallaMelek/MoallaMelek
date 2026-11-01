@@ -71,3 +71,12 @@ class CounterTransportTests(unittest.TestCase):
             self.assertEqual(request.call_args.args[0].get_header("User-agent"),
                              "profile-views-snapshot/1.0")
 
+    def test_configured_username_is_encoded_as_one_parameter(self):
+        with tempfile.TemporaryDirectory() as directory:
+            with patch.dict(views.os.environ, {"GH_USER": "sample&label=other"}):
+                with patch.object(views.urllib.request, "urlopen", return_value=self.valid_response()) as request:
+                    views.refresh(Path(directory) / "views.svg")
+            query = urllib.parse.parse_qs(urllib.parse.urlparse(request.call_args.args[0].full_url).query)
+            self.assertEqual(query["username"], ["sample&label=other"])
+            self.assertEqual(query["label"], ["PROFILE VIEWS"])
+
