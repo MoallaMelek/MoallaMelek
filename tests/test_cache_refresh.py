@@ -40,3 +40,8 @@ class CacheRefreshTests(unittest.TestCase):
         result = self.refresh('<img src="assets/activity.svg" />')
         self.assertEqual(result, f'<img src="assets/activity.svg?v={self.digest("activity")}" />')
 
+    def test_old_cache_version_is_replaced(self):
+        result = self.refresh('<img src="assets/activity.svg?v=legacy_1" />')
+        self.assertIn(f'activity.svg?v={self.digest("activity")}', result)
+        self.assertNotIn("legacy_1", result)
+
