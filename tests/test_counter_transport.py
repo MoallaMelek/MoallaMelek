@@ -85,3 +85,8 @@ class CounterTransportTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             views.read_count(svg)
 
+    def test_decimal_view_count_is_rejected(self):
+        svg = '<svg xmlns="http://www.w3.org/2000/svg"><title>PROFILE VIEWS: 1.5</title></svg>'
+        with self.assertRaises(ValueError):
+            views.read_count(svg)
+
