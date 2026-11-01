@@ -60,3 +60,7 @@ class RecentWindowTests(unittest.TestCase):
     def test_sparse_dates_keep_exact_totals(self):
         self.assert_window([(0, 30), (2, 5), (6, 7), (12, 11)], [30, 42, 53], 4)
 
+    def test_week_crosses_new_year(self):
+        now = dt.datetime(2027, 1, 1, 12, tzinfo=dt.timezone.utc)
+        self.assert_window([(0, 3), (1, 5), (6, 7), (7, 11)], [3, 15, 26], 4, now)
+
