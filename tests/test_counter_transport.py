@@ -38,3 +38,6 @@ class CounterTransportTests(unittest.TestCase):
     def test_truncated_svg_does_not_replace_snapshot(self):
         self.assert_keeps_snapshot(b'<svg xmlns="http://www.w3.org/2000/svg"><title>')
 
+    def test_empty_counter_title_does_not_replace_snapshot(self):
+        self.assert_keeps_snapshot(b'<svg xmlns="http://www.w3.org/2000/svg"><title/></svg>')
+
