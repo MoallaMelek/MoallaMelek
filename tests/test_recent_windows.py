@@ -64,3 +64,7 @@ class RecentWindowTests(unittest.TestCase):
         now = dt.datetime(2027, 1, 1, 12, tzinfo=dt.timezone.utc)
         self.assert_window([(0, 3), (1, 5), (6, 7), (7, 11)], [3, 15, 26], 4, now)
 
+    def test_utc_day_is_used_near_local_midnight(self):
+        now = dt.datetime(2026, 11, 1, 23, 30, tzinfo=dt.timezone.utc)
+        self.assert_window([(-1, 999), (0, 30), (1, 20)], [30, 50, 50], 2, now)
+
