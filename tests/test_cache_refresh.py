@@ -59,3 +59,7 @@ class CacheRefreshTests(unittest.TestCase):
         original = '<img src="https://example.com/chart.svg?v=keep" />'
         self.assertEqual(self.refresh(original), original)
 
+    def test_nonimage_links_keep_their_versions(self):
+        original = '<a href="https://example.com/?v=keep">Documentation</a>'
+        self.assertEqual(self.refresh(original), original)
+
