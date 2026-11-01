@@ -51,3 +51,6 @@ class RecentWindowTests(unittest.TestCase):
     def test_thirty_one_days_ago_is_outside_month(self):
         self.assert_window([(31, 13)], [0, 0, 0], 0)
 
+    def test_future_contributions_are_not_counted(self):
+        self.assert_window([(-1, 999), (0, 30)], [30, 30, 30], 1)
+
