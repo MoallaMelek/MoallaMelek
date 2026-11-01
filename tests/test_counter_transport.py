@@ -56,3 +56,11 @@ class CounterTransportTests(unittest.TestCase):
                 self.assertTrue(views.refresh(out))
             self.assertEqual(views.read_count(out.read_bytes()), 70)
 
+    def test_transport_has_bounded_read_and_timeout(self):
+        with tempfile.TemporaryDirectory() as directory:
+            response = self.valid_response()
+            with patch.object(views.urllib.request, "urlopen", return_value=response) as request:
+                views.refresh(Path(directory) / "views.svg")
+            self.assertEqual(request.call_args.kwargs["timeout"], 20)
+            response.__enter__.return_value.read.assert_called_once_with(32769)
+
