@@ -68,3 +68,8 @@ class CacheRefreshTests(unittest.TestCase):
                               {"pin-Reward-Goblin.svg": "project pin"})
         self.assertIn(f'pin-Reward-Goblin.svg?v={self.digest("project pin")}', result)
 
+    def test_external_streak_cache_tracks_streak_contents(self):
+        source = '<img src="https://streak-stats.demolab.com?user=Melek&v=old" />'
+        self.assertNotEqual(self.refresh(source),
+                            self.refresh(source, {"streak.svg": "new streak"}))
+
