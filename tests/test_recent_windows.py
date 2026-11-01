@@ -39,3 +39,6 @@ class RecentWindowTests(unittest.TestCase):
     def test_today_is_in_all_windows(self):
         self.assert_window([(0, 30)], [30, 30, 30], 1)
 
+    def test_six_days_ago_is_in_week(self):
+        self.assert_window([(6, 7)], [0, 7, 7], 1)
+
