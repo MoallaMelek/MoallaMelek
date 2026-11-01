@@ -80,3 +80,8 @@ class CounterTransportTests(unittest.TestCase):
             self.assertEqual(query["username"], ["sample&label=other"])
             self.assertEqual(query["label"], ["PROFILE VIEWS"])
 
+    def test_negative_view_count_is_rejected(self):
+        svg = '<svg xmlns="http://www.w3.org/2000/svg"><title>PROFILE VIEWS: -1</title></svg>'
+        with self.assertRaises(ValueError):
+            views.read_count(svg)
+
