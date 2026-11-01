@@ -35,3 +35,6 @@ class CounterTransportTests(unittest.TestCase):
     def test_oversized_response_does_not_replace_snapshot(self):
         self.assert_keeps_snapshot(b"x" * 32769)
 
+    def test_truncated_svg_does_not_replace_snapshot(self):
+        self.assert_keeps_snapshot(b'<svg xmlns="http://www.w3.org/2000/svg"><title>')
+
