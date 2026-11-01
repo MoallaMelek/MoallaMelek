@@ -63,3 +63,8 @@ class CacheRefreshTests(unittest.TestCase):
         original = '<a href="https://example.com/?v=keep">Documentation</a>'
         self.assertEqual(self.refresh(original), original)
 
+    def test_hyphenated_project_pin_is_versioned(self):
+        result = self.refresh('<img src="assets/pin-Reward-Goblin.svg?v=old" />',
+                              {"pin-Reward-Goblin.svg": "project pin"})
+        self.assertIn(f'pin-Reward-Goblin.svg?v={self.digest("project pin")}', result)
+
