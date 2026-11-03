@@ -115,3 +115,13 @@ thirty days ago is still inside the monthly total.
 
 The active-day caption counts dates with positive contributions, rather than
 the number of contributions. Missing dates contribute zero to these windows.
+
+## Streak examples
+
+With contributions on Monday and Tuesday, an unfinished Wednesday preserves a
+current streak of two days. If Wednesday finishes with no contributions and
+Thursday also has none yet, the current streak is zero.
+
+A contribution on Thursday starts a new streak of one day; it does not fill
+Wednesday. The longest historical run remains available independently of the
+current streak. Adding more commits on one date increases volume, not days.
