@@ -147,3 +147,14 @@ It displays up to eight languages; percentages use the aggregated language
 total before that display limit. Listed percentages therefore need not sum to
 100 when additional languages exist. The query currently requests at most
 100 repositories and 20 languages per repository.
+
+## Profile-view recovery
+
+`scripts/refresh_profile_views.py` accepts a numeric SVG counter title.
+Oversized, malformed, unavailable, or decreasing responses keep an existing
+snapshot and produce a warning. Without an existing snapshot, a failed refresh
+raises an error instead of inventing a badge.
+
+A successful response is written to a temporary file and then replaces the
+badge. The snapshot request uses its own user agent. The separate one-pixel
+README image remains responsible for recording profile requests.
