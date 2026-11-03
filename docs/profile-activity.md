@@ -172,3 +172,14 @@ README image remains responsible for recording profile requests.
 
 A successful test step alone does not prove that cards were generated or pushed.
 Keep the last published assets until a complete refresh succeeds.
+
+## Scheduling and concurrent updates
+
+The workflow is scheduled at minute 17 of each UTC hour and also supports
+manual dispatch. Pushes to `master` trigger it when a configured path changes.
+Check the workflow file for the current path list.
+
+The `profile-cards` concurrency group cancels an older in-progress run when a
+newer one starts. Checkout explicitly targets current `master`, and publication
+rebases onto the remote branch before pushing. If publication still fails,
+inspect concurrent edits; do not force-push generated cards over them.
