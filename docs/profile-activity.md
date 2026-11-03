@@ -206,3 +206,20 @@ that palette and typography definitions did not change. Updated coordinates,
 counts, dates, and cache hashes are expected. Source checks verify these
 contracts; a rendered visual check is a separate check and should be reported
 only when performed.
+
+## Inspecting a published snapshot
+
+From the repository root, print the last recorded date and streak metrics:
+
+```sh
+python -c "import json; from pathlib import Path; d=json.loads(Path('assets/activity-data.json').read_text(encoding='utf-8')); print(d['updated_at']); print(d['days'][-1]); print(d['streak'])"
+```
+
+Confirm that the final date matches the intended UTC contribution day and that
+the snapshot was refreshed after the relevant commits became visible. To
+verify an image version, compute the corresponding SVG's SHA-256 and compare
+its first 12 hexadecimal characters with the README URL.
+
+Run the offline regressions with `python -m unittest discover -s tests`.
+These checks cover boundary dates, API handling, counters, cache versions, and
+generation output; they do not verify live indexing or external image delivery.
