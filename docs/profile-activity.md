@@ -125,3 +125,13 @@ Thursday also has none yet, the current streak is zero.
 A contribution on Thursday starts a new streak of one day; it does not fill
 Wednesday. The longest historical run remains available independently of the
 current streak. Adding more commits on one date increases volume, not days.
+
+## Project card maintenance
+
+The `PINNED` list in `scripts/generate_cards.py` selects which project cards
+are generated. A listed name must match a repository returned by the account
+query. Missing projects are skipped; adding a name does not add a README link.
+
+Cards use the repository description, primary language, stars, and forks.
+Descriptions are limited to three wrapped lines. A missing primary language
+uses Markdown, and long names shrink to fit the existing card width.
