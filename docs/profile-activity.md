@@ -95,3 +95,13 @@ comes from its own January-to-refresh-time query.
 These values measure different things: yearly contributions include activity
 beyond commits. Do not use the yearly total as a commit count or derive the
 owner's work from the number of bot refresh commits.
+
+## Curve and calendar ranges
+
+The curve includes dates from September 26, 2026 onward. Its vertical scale
+adapts to the highest count in that range, so a higher peak can change the
+positions of older points without changing their counts.
+
+The heatmap includes today and the preceding 364 dates. Dates before that
+window can still contribute to lifetime streak metrics. Both renderers remove
+future calendar padding; their different ranges are intentional.
