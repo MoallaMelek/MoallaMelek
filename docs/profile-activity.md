@@ -84,3 +84,14 @@ The generator stops before making requests when neither token is set.
 The workflow supplies the repository owner as `GH_USER`. Output paths are
 derived from the script location, rather than the shell's working directory.
 No third-party Python package is required.
+
+## Lifetime and annual statistics
+
+The total-commit value sums GitHub's `totalCommitContributions` across account
+years. Separate calendar-year queries avoid requesting the entire account
+history in one contribution collection. The current year's contribution total
+comes from its own January-to-refresh-time query.
+
+These values measure different things: yearly contributions include activity
+beyond commits. Do not use the yearly total as a commit count or derive the
+owner's work from the number of bot refresh commits.
