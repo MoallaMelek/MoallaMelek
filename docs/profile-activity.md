@@ -194,3 +194,15 @@ Use repository secrets for credentials. Do not put token values in command
 examples, documentation, snapshots, screenshots, or logs. A change in token
 visibility can change the activity returned by GitHub; compare visibility
 before treating different snapshots as a calculation defect.
+
+## Preserving the existing design
+
+For a data-only refresh, compare the README before and after with image
+`?v=` values ignored. Its section order, links, widths, heights, alternative
+text, and surrounding markup should remain unchanged.
+
+Check the curve's 900-by-280 canvas and the heatmap's 900-by-180 canvas. Confirm
+that palette and typography definitions did not change. Updated coordinates,
+counts, dates, and cache hashes are expected. Source checks verify these
+contracts; a rendered visual check is a separate check and should be reported
+only when performed.
