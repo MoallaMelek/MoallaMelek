@@ -183,3 +183,14 @@ The `profile-cards` concurrency group cancels an older in-progress run when a
 newer one starts. Checkout explicitly targets current `master`, and publication
 rebases onto the remote branch before pushing. If publication still fails,
 inspect concurrent edits; do not force-push generated cards over them.
+
+## Credentials and workflow permissions
+
+The workflow grants `contents: write` so its final step can publish generated
+assets. Card generation uses `METRICS_TOKEN` when configured, otherwise the
+built-in `GITHUB_TOKEN`.
+
+Use repository secrets for credentials. Do not put token values in command
+examples, documentation, snapshots, screenshots, or logs. A change in token
+visibility can change the activity returned by GitHub; compare visibility
+before treating different snapshots as a calculation defect.
