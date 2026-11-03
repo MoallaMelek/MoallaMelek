@@ -57,3 +57,20 @@ the new commit hashes and their default branches, and verify each commit's autho
 is associated with the profile owner. Report the observed difference separately
 from the number pushed. Automated card-refresh commits belong to the bot and
 must not be reported as new owner-authored contributions.
+
+## Generated asset reference
+
+| File under `assets/` | Purpose | Source |
+| --- | --- | --- |
+| `activity-data.json` | Inspectable counts and refresh time | GitHub GraphQL |
+| `activity.svg` | Activity curve since September 26, 2026 | Lifetime calendar |
+| `heatmap.svg` | Rolling 365-day calendar | Lifetime calendar |
+| `streak.svg` | Active days, current streak, longest streak | Lifetime calendar |
+| `recent-activity.svg` | Today, last 7 days, last 31 days | Recent calendar |
+| `stats.svg` | Account and repository totals | Account queries |
+| `top-langs.svg` | Language byte shares | Public repository languages |
+| `activity-updated.svg` | Snapshot timestamp | Generator's UTC clock |
+| `profile-views.svg` | Last accepted view count | Counter snapshot script |
+
+Generated files support maintenance even when the README does not embed every
+card. The visible streak image currently uses the external streak service.
