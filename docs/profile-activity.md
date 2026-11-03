@@ -135,3 +135,15 @@ query. Missing projects are skipped; adding a name does not add a README link.
 Cards use the repository description, primary language, stars, and forks.
 Descriptions are limited to three wrapped lines. A missing primary language
 uses Markdown, and long names shrink to fit the existing card width.
+
+## Language card interpretation
+
+Languages are weighted by repository language bytes, not commit volume, usage
+frequency, or proficiency. The query reads public, owned, non-fork repositories;
+the profile repository is excluded from project aggregation.
+
+The generator excludes Hack, Batchfile, and Objective-C as tooling noise.
+It displays up to eight languages; percentages use the aggregated language
+total before that display limit. Listed percentages therefore need not sum to
+100 when additional languages exist. The query currently requests at most
+100 repositories and 20 languages per repository.
