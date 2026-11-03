@@ -158,3 +158,17 @@ raises an error instead of inventing a badge.
 A successful response is written to a temporary file and then replaces the
 badge. The snapshot request uses its own user agent. The separate one-pixel
 README image remains responsible for recording profile requests.
+
+## Failed refresh procedure
+
+1. Open the failed **Update profile cards** run.
+2. Identify the first failed step: tests, view snapshot, card generation, or
+   commit publication.
+3. For a test failure, reproduce the reported test before changing generation.
+   For a generation failure, inspect the API error and token availability.
+4. For a publication failure, compare the checked-out branch with current
+   `master`; retain newer repository changes.
+5. Correct the cause, rerun the workflow, and inspect the resulting JSON timestamp.
+
+A successful test step alone does not prove that cards were generated or pushed.
+Keep the last published assets until a complete refresh succeeds.
