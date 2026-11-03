@@ -105,3 +105,13 @@ positions of older points without changing their counts.
 The heatmap includes today and the preceding 364 dates. Dates before that
 window can still contribute to lifetime streak metrics. Both renderers remove
 future calendar padding; their different ranges are intentional.
+
+## Recent activity boundaries
+
+Recent-activity windows include today. A seven-day total covers offsets zero
+through six days ago; a 31-day total covers offsets zero through thirty days
+ago. A contribution seven days ago is outside the weekly total, while one
+thirty days ago is still inside the monthly total.
+
+The active-day caption counts dates with positive contributions, rather than
+the number of contributions. Missing dates contribute zero to these windows.
