@@ -74,3 +74,13 @@ must not be reported as new owner-authored contributions.
 
 Generated files support maintenance even when the README does not embed every
 card. The visible streak image currently uses the external streak service.
+
+## Generator configuration
+
+Run commands from the repository root. `GH_USER` selects the GitHub login and
+defaults to `MoallaMelek`. `GH_TOKEN` takes precedence over `GITHUB_TOKEN`.
+The generator stops before making requests when neither token is set.
+
+The workflow supplies the repository owner as `GH_USER`. Output paths are
+derived from the script location, rather than the shell's working directory.
+No third-party Python package is required.
