@@ -13,9 +13,9 @@
 <text x="25" y="35" class="title">Recent Activity</text>
 <text x="150" y="84" text-anchor="middle" class="value" style="font-size:30px">0</text>
 <text x="150" y="113" text-anchor="middle" class="label">Today · UTC</text>
-<text x="450" y="84" text-anchor="middle" class="value" style="font-size:30px">85</text>
+<text x="450" y="84" text-anchor="middle" class="value" style="font-size:30px">65</text>
 <text x="450" y="113" text-anchor="middle" class="label">Last 7 days</text>
-<text x="750" y="84" text-anchor="middle" class="value" style="font-size:30px">445</text>
+<text x="750" y="84" text-anchor="middle" class="value" style="font-size:30px">442</text>
 <text x="750" y="113" text-anchor="middle" class="label">Last 31 days</text>
-<text x="450" y="145" text-anchor="middle" class="muted">27 active days in the last 31 days · contributions, not only commits</text>
+<text x="450" y="145" text-anchor="middle" class="muted">26 active days in the last 31 days · contributions, not only commits</text>
 </svg>
