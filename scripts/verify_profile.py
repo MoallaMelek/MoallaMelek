@@ -119,6 +119,12 @@ def calendar_records(context):
     return all(isinstance(day, dict) and {"date", "contributionCount"} <= day.keys()
                for day in context.days())
 
+@check("calendar.dates: expected ISO calendar dates")
+def canonical_dates(context):
+    return all(isinstance(day["date"], str) and
+               dt.date.fromisoformat(day["date"]).isoformat() == day["date"]
+               for day in context.days())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
