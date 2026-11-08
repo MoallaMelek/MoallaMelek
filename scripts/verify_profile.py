@@ -161,6 +161,10 @@ def statistics_year(context):
     year = context.data["stats"]["year"]
     return type(year) is int and year == context.timestamp().year
 
+@check("streak: expected an object")
+def streak_object(context):
+    return isinstance(context.data["streak"], dict)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
