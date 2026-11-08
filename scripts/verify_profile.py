@@ -202,6 +202,10 @@ def svg_files(context):
     return all(context.svg(name).tag == "{http://www.w3.org/2000/svg}svg"
                for name in REQUIRED)
 
+@check("svg.roles: generated cards must expose the image role")
+def svg_roles(context):
+    return all(context.svg(name).get("role") == "img" for name in REQUIRED)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
