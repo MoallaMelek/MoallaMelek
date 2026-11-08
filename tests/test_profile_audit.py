@@ -124,3 +124,17 @@ class ProfileAuditTests(unittest.TestCase):
             svg = path.read_text(encoding="utf-8")
             path.write_text(svg.replace("</svg>", "<script>unsafe()</script></svg>"), encoding="utf-8")
             self.assertTrue(any(issue.startswith("svg.content:") for issue in verify.audit(root, NOW)))
+
+    def test_cli_reports_success_and_failure(self):
+        with self.fixture() as root, patch.object(verify, "dt", CLOCK):
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                status = verify.main(["--root", str(root), "--json"])
+            self.assertEqual(status, 0)
+            self.assertTrue(json.loads(output.getvalue())["ok"])
+            (root / "assets/streak.svg").unlink()
+            output = io.StringIO()
+            with contextlib.redirect_stdout(output):
+                status = verify.main(["--root", str(root), "--json"])
+            self.assertEqual(status, 1)
+            self.assertFalse(json.loads(output.getvalue())["ok"])
