@@ -197,6 +197,11 @@ def visible_streak_length(context):
         cursor -= dt.timedelta(days=1)
     return context.data["streak"]["current"] >= visible
 
+@check("svg.files: expected all generated cards to be valid SVG")
+def svg_files(context):
+    return all(context.svg(name).tag == "{http://www.w3.org/2000/svg}svg"
+               for name in REQUIRED)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
