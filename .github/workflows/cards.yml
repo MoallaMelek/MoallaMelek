@@ -51,6 +51,9 @@ jobs:
           GH_USER: ${{ github.repository_owner }}
         run: python scripts/generate_cards.py
 
+      - name: Verify generated profile assets
+        run: python scripts/verify_profile.py
+
       - name: Commit changes
         run: |
           set -euo pipefail
