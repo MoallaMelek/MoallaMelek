@@ -225,6 +225,16 @@ def heatmap_palette(context):
     palette = {"#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"}
     return bool(cells) and all(node.get("fill") in palette for node in cells)
 
+@check("svg.content: script, embedded HTML, or event handlers found")
+def svg_active_content(context):
+    for name in REQUIRED:
+        for node in context.svg(name).iter():
+            if node.tag.rsplit("}", 1)[-1].lower() in {"script", "foreignobject"}:
+                return False
+            if any(key.rsplit("}", 1)[-1].lower().startswith("on") for key in node.attrib):
+                return False
+    return True
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
