@@ -256,6 +256,15 @@ def heatmap_today(context):
                 f"{latest['date']}: {latest['contributionCount']} contributions")
     return False
 
+@check("svg.streak: rendered values do not match snapshot metrics")
+def rendered_streak(context):
+    root = context.svg("streak")
+    values = {node.get("x"): node.text for node in root.findall("s:text", NS)
+              if node.get("y") == "90"}
+    metrics = context.data["streak"]
+    return values == {"150": f"{metrics['active_days']:,}",
+                      "450": f"{metrics['current']:,}", "750": f"{metrics['longest']:,}"}
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
