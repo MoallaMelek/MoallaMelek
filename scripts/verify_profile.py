@@ -246,6 +246,16 @@ def local_asset_paths(context):
     return all((context.root / path).resolve().is_relative_to(context.root)
                for path, version in context.images())
 
+@check("svg.today: heatmap tooltip does not match the snapshot count")
+def heatmap_today(context):
+    latest = context.days()[-1]
+    for cell in context.svg("heatmap").findall("s:rect", NS):
+        if cell.get("data-date") == latest["date"]:
+            title = cell.find("s:title", NS)
+            return title is not None and title.text == (
+                f"{latest['date']}: {latest['contributionCount']} contributions")
+    return False
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
