@@ -110,6 +110,10 @@ def utc_timestamp(context):
 def timestamp_not_future(context):
     return context.timestamp() <= context.now + dt.timedelta(minutes=5)
 
+@check("calendar.days: expected a nonempty list")
+def calendar_list(context):
+    return isinstance(context.days(), list) and bool(context.days())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
