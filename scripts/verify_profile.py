@@ -186,6 +186,17 @@ def current_streak_activity(context):
     expected = today in active or today - dt.timedelta(days=1) in active
     return (context.data["streak"]["current"] > 0) == expected
 
+@check("streak.length: current streak is smaller than visible consecutive history")
+def visible_streak_length(context):
+    today = context.timestamp().date()
+    active = context.active()
+    cursor = today if today in active else today - dt.timedelta(days=1)
+    visible = 0
+    while cursor in active:
+        visible += 1
+        cursor -= dt.timedelta(days=1)
+    return context.data["streak"]["current"] >= visible
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
