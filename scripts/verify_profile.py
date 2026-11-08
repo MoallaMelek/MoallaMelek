@@ -101,6 +101,11 @@ def user_login(context):
     return isinstance(context.data["user"], str) and bool(re.fullmatch(
         r"[A-Za-z0-9](?:[A-Za-z0-9-]{0,37}[A-Za-z0-9])?", context.data["user"]))
 
+@check("snapshot.timestamp: expected an aware UTC timestamp")
+def utc_timestamp(context):
+    stamp = context.timestamp()
+    return stamp.tzinfo is not None and stamp.utcoffset() == dt.timedelta(0)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
