@@ -212,6 +212,12 @@ def activity_dimensions(context):
     return (root.get("width"), root.get("height"), root.get("viewBox")) == (
         "900", "280", "0 0 900 280")
 
+@check("svg.heatmap: expected the existing 900 by 180 canvas")
+def heatmap_dimensions(context):
+    root = context.svg("heatmap")
+    return (root.get("width"), root.get("height"), root.get("viewBox")) == (
+        "900", "180", "0 0 900 180")
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
