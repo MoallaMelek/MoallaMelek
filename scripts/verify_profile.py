@@ -147,6 +147,10 @@ def no_future_dates(context):
 def final_date(context):
     return context.dates()[-1] == context.timestamp().date()
 
+@check("stats: expected an object")
+def statistics_object(context):
+    return isinstance(context.data["stats"], dict)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
