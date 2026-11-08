@@ -139,6 +139,10 @@ def unique_dates(context):
 def contribution_counts(context):
     return all(count(day["contributionCount"]) for day in context.days())
 
+@check("calendar.future: dates extend past the refresh day")
+def no_future_dates(context):
+    return all(date <= context.timestamp().date() for date in context.dates())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
