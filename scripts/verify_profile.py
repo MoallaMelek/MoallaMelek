@@ -156,6 +156,11 @@ def statistics_counts(context):
     return all(count(context.data["stats"][key])
                for key in ("stars", "commits", "year_contribs", "prs", "issues", "repos"))
 
+@check("stats.year: year does not match refresh timestamp")
+def statistics_year(context):
+    year = context.data["stats"]["year"]
+    return type(year) is int and year == context.timestamp().year
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
