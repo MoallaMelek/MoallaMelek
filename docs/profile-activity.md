@@ -223,3 +223,21 @@ its first 12 hexadecimal characters with the README URL.
 Run the offline regressions with `python -m unittest discover -s tests`.
 These checks cover boundary dates, API handling, counters, cache versions, and
 generation output; they do not verify live indexing or external image delivery.
+
+## Offline audit before publication
+
+Run `python scripts/verify_profile.py` from the repository root to check the
+saved snapshot, SVG cards, and local README image hashes together. The command
+reads files without changing them and makes no network requests. It checks UTC
+dates, count types, streak consistency, SVG dimensions and contents, and cache
+versions. Each failed check prints a diagnostic and produces exit status 1.
+
+Use `--root PATH` to inspect another checkout or `--json` for a machine-readable
+result. Run against a complete set of assets from the same refresh. Local image
+hashes depend on exact bytes, so converting line endings can invalidate them.
+
+The refresh workflow runs this audit after card generation and before commit
+publication. The audit confirms file consistency; live GitHub indexing and
+external streak-image delivery must still be verified separately. If an audit
+fails, inspect its named check, correct the source, regenerate, and rerun it.
+Do not repair a failure by editing contribution counts or disabling the check.
