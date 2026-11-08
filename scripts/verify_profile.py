@@ -135,6 +135,10 @@ def unique_dates(context):
     dates = context.dates()
     return len(dates) == len(set(dates))
 
+@check("calendar.counts: expected nonnegative integer counts")
+def contribution_counts(context):
+    return all(count(day["contributionCount"]) for day in context.days())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
