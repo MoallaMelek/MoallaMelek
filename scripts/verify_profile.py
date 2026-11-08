@@ -114,6 +114,11 @@ def timestamp_not_future(context):
 def calendar_list(context):
     return isinstance(context.days(), list) and bool(context.days())
 
+@check("calendar.records: missing date or contributionCount")
+def calendar_records(context):
+    return all(isinstance(day, dict) and {"date", "contributionCount"} <= day.keys()
+               for day in context.days())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
