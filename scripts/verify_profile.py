@@ -130,6 +130,11 @@ def chronological_dates(context):
     dates = context.dates()
     return dates == sorted(dates)
 
+@check("calendar.unique: duplicate dates found")
+def unique_dates(context):
+    dates = context.dates()
+    return len(dates) == len(set(dates))
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
