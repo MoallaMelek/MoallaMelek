@@ -179,6 +179,13 @@ def streak_order(context):
 def visible_active_days(context):
     return context.data["streak"]["active_days"] >= len(context.active())
 
+@check("streak.current: activity near today contradicts current streak")
+def current_streak_activity(context):
+    today = context.timestamp().date()
+    active = context.active()
+    expected = today in active or today - dt.timedelta(days=1) in active
+    return (context.data["streak"]["current"] > 0) == expected
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
