@@ -106,3 +106,8 @@ class ProfileAuditTests(unittest.TestCase):
             self.update_snapshot(root, lambda data: data["days"].append(
                 {"date": "2026-11-09", "contributionCount": 999}))
             self.assertTrue(any(issue.startswith("calendar.future:") for issue in verify.audit(root, NOW)))
+
+    def test_contradictory_streak_lengths_are_reported(self):
+        with self.fixture() as root:
+            self.update_snapshot(root, lambda data: data["streak"].update(current=10, longest=1))
+            self.assertTrue(any(issue.startswith("streak.order:") for issue in verify.audit(root, NOW)))
