@@ -235,6 +235,12 @@ def svg_active_content(context):
                 return False
     return True
 
+@check("readme.cache: local card hashes do not match SVG contents")
+def image_versions(context):
+    images = context.images()
+    return bool(images) and all(version == hashlib.sha256(
+        context.path(path).read_bytes()).hexdigest()[:12] for path, version in images)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
