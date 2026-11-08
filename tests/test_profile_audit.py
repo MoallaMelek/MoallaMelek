@@ -88,3 +88,15 @@ class ProfileAuditTests(unittest.TestCase):
         with self.fixture() as root:
             self.update_snapshot(root, lambda data: data["days"][-1].update(contributionCount=True))
             self.assertTrue(any(issue.startswith("calendar.counts:") for issue in verify.audit(root, NOW)))
+
+    def test_date_order_and_uniqueness_are_reported(self):
+        for mode in ("duplicate", "reverse"):
+            with self.subTest(mode=mode), self.fixture() as root:
+                def change(data):
+                    if mode == "duplicate":
+                        data["days"].append(dict(data["days"][-1]))
+                    else:
+                        data["days"].reverse()
+                self.update_snapshot(root, change)
+                label = "calendar.unique:" if mode == "duplicate" else "calendar.order:"
+                self.assertTrue(any(issue.startswith(label) for issue in verify.audit(root, NOW)))
