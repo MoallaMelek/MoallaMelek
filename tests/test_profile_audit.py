@@ -83,3 +83,8 @@ class ProfileAuditTests(unittest.TestCase):
         with self.fixture() as root:
             (root / "assets/activity-data.json").write_text("{", encoding="utf-8")
             self.assertTrue(verify.audit(root, NOW)[0].startswith("input:"))
+
+    def test_boolean_counts_are_reported(self):
+        with self.fixture() as root:
+            self.update_snapshot(root, lambda data: data["days"][-1].update(contributionCount=True))
+            self.assertTrue(any(issue.startswith("calendar.counts:") for issue in verify.audit(root, NOW)))
