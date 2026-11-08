@@ -117,3 +117,10 @@ class ProfileAuditTests(unittest.TestCase):
             path = root / "assets/activity.svg"
             path.write_text(path.read_text(encoding="utf-8") + " ", encoding="utf-8")
             self.assertTrue(any(issue.startswith("readme.cache:") for issue in verify.audit(root, NOW)))
+
+    def test_active_svg_content_is_reported(self):
+        with self.fixture() as root:
+            path = root / "assets/activity.svg"
+            svg = path.read_text(encoding="utf-8")
+            path.write_text(svg.replace("</svg>", "<script>unsafe()</script></svg>"), encoding="utf-8")
+            self.assertTrue(any(issue.startswith("svg.content:") for issue in verify.audit(root, NOW)))
