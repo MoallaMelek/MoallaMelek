@@ -111,3 +111,9 @@ class ProfileAuditTests(unittest.TestCase):
         with self.fixture() as root:
             self.update_snapshot(root, lambda data: data["streak"].update(current=10, longest=1))
             self.assertTrue(any(issue.startswith("streak.order:") for issue in verify.audit(root, NOW)))
+
+    def test_changed_asset_requires_a_new_readme_version(self):
+        with self.fixture() as root:
+            path = root / "assets/activity.svg"
+            path.write_text(path.read_text(encoding="utf-8") + " ", encoding="utf-8")
+            self.assertTrue(any(issue.startswith("readme.cache:") for issue in verify.audit(root, NOW)))
