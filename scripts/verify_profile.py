@@ -165,6 +165,11 @@ def statistics_year(context):
 def streak_object(context):
     return isinstance(context.data["streak"], dict)
 
+@check("streak.counts: expected nonnegative integer metrics")
+def streak_counts(context):
+    return all(count(context.data["streak"][key])
+               for key in ("current", "longest", "active_days"))
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
