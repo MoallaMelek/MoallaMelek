@@ -106,6 +106,10 @@ def utc_timestamp(context):
     stamp = context.timestamp()
     return stamp.tzinfo is not None and stamp.utcoffset() == dt.timedelta(0)
 
+@check("snapshot.timestamp: refresh time is in the future")
+def timestamp_not_future(context):
+    return context.timestamp() <= context.now + dt.timedelta(minutes=5)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
