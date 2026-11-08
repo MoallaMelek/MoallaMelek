@@ -241,6 +241,11 @@ def image_versions(context):
     return bool(images) and all(version == hashlib.sha256(
         context.path(path).read_bytes()).hexdigest()[:12] for path, version in images)
 
+@check("readme.paths: referenced assets must resolve inside the repository")
+def local_asset_paths(context):
+    return all((context.root / path).resolve().is_relative_to(context.root)
+               for path, version in context.images())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
