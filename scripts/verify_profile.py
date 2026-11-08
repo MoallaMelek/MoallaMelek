@@ -143,6 +143,10 @@ def contribution_counts(context):
 def no_future_dates(context):
     return all(date <= context.timestamp().date() for date in context.dates())
 
+@check("calendar.today: final date does not match refresh day")
+def final_date(context):
+    return context.dates()[-1] == context.timestamp().date()
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
