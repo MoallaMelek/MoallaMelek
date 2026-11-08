@@ -125,6 +125,11 @@ def canonical_dates(context):
                dt.date.fromisoformat(day["date"]).isoformat() == day["date"]
                for day in context.days())
 
+@check("calendar.order: dates must be chronological")
+def chronological_dates(context):
+    dates = context.dates()
+    return dates == sorted(dates)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
