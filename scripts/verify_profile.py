@@ -170,6 +170,11 @@ def streak_counts(context):
     return all(count(context.data["streak"][key])
                for key in ("current", "longest", "active_days"))
 
+@check("streak.order: expected current <= longest <= active days")
+def streak_order(context):
+    metrics = context.data["streak"]
+    return metrics["current"] <= metrics["longest"] <= metrics["active_days"]
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
