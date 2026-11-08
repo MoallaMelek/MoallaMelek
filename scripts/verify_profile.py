@@ -206,6 +206,12 @@ def svg_files(context):
 def svg_roles(context):
     return all(context.svg(name).get("role") == "img" for name in REQUIRED)
 
+@check("svg.activity: expected the existing 900 by 280 canvas")
+def activity_dimensions(context):
+    root = context.svg("activity")
+    return (root.get("width"), root.get("height"), root.get("viewBox")) == (
+        "900", "280", "0 0 900 280")
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
