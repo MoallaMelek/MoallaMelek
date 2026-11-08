@@ -175,6 +175,10 @@ def streak_order(context):
     metrics = context.data["streak"]
     return metrics["current"] <= metrics["longest"] <= metrics["active_days"]
 
+@check("streak.active: lifetime active days are smaller than visible history")
+def visible_active_days(context):
+    return context.data["streak"]["active_days"] >= len(context.active())
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
