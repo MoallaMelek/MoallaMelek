@@ -218,6 +218,13 @@ def heatmap_dimensions(context):
     return (root.get("width"), root.get("height"), root.get("viewBox")) == (
         "900", "180", "0 0 900 180")
 
+@check("svg.palette: calendar cells must use the existing green palette")
+def heatmap_palette(context):
+    cells = [node for node in context.svg("heatmap").findall("s:rect", NS)
+             if node.get("data-date")]
+    palette = {"#161B22", "#0E4429", "#006D32", "#26A641", "#39D353"}
+    return bool(cells) and all(node.get("fill") in palette for node in cells)
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
