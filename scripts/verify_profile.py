@@ -151,6 +151,11 @@ def final_date(context):
 def statistics_object(context):
     return isinstance(context.data["stats"], dict)
 
+@check("stats.counts: expected nonnegative integer counters")
+def statistics_counts(context):
+    return all(count(context.data["stats"][key])
+               for key in ("stars", "commits", "year_contribs", "prs", "issues", "repos"))
+
 
 if __name__ == "__main__":
     raise SystemExit(main())
