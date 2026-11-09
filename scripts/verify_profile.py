@@ -299,5 +299,11 @@ def issue_total(context):
     return stats_value(context, "Issues opened") == f"{stats['issues']:,}"
 
 
+@check("stats.rendered.repos: SVG value disagrees with the snapshot")
+def repository_total(context):
+    stats = context.data["stats"]
+    return stats_value(context, "Public repositories") == f"{stats['repos']:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
