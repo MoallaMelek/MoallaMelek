@@ -415,5 +415,21 @@ def curve_dots(context):
     return positions == curve_points(context)
 
 
+@check("curve.total: displayed total disagrees with visible calendar history")
+def curve_total(context):
+    if context.timestamp().date() < CURVE_START:
+        return True
+    label = card_text(context, "activity", 875, 35) or ""
+    match = re.match(r"^(\d+) contributions since ", label)
+    if not match:
+        return False
+    visible = sum(day["contributionCount"] for day in context.days()
+                  if day["date"] >= CURVE_START.isoformat())
+    shown = int(match.group(1))
+    if context.dates()[0] <= CURVE_START:
+        return shown == visible
+    return shown >= visible
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
