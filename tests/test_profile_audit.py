@@ -148,3 +148,10 @@ class ProfileAuditTests(unittest.TestCase):
                 with self.subTest(check=prefix):
                     self.assertTrue(any(issue.startswith(prefix) for issue in issues))
             self.assertFalse(any(issue.startswith("readme.cache:") for issue in issues))
+
+    def test_a_stale_stats_card_reports_the_specific_counter(self):
+        with self.fixture() as root:
+            self.update_snapshot(root, lambda data: data["stats"].update(commits=101))
+            issues = verify.audit(root, NOW)
+            self.assertTrue(any(issue.startswith("stats.rendered.commits:") for issue in issues))
+            self.assertFalse(any(issue.startswith("stats.rendered.stars:") for issue in issues))
