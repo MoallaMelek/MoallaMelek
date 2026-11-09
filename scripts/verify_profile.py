@@ -305,5 +305,11 @@ def repository_total(context):
     return stats_value(context, "Public repositories") == f"{stats['repos']:,}"
 
 
+@check("stats.rendered.year_contribs: SVG value disagrees with the snapshot")
+def annual_total(context):
+    stats = context.data["stats"]
+    return stats_value(context, f"Contributions ({stats['year']})") == f"{stats['year_contribs']:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
