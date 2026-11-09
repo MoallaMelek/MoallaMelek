@@ -346,5 +346,17 @@ def recent_active(context):
     return caption.startswith(f"{active} active days in the last 31 days")
 
 
+def heatmap_cells(context):
+    return [cell for cell in context.svg("heatmap").findall("s:rect", NS)
+            if cell.get("data-date")]
+
+
+@check("heatmap.dates: expected 365 consecutive dates ending on the snapshot date")
+def heatmap_dates(context):
+    end = context.timestamp().date()
+    dates = [(end - dt.timedelta(days=offset)).isoformat() for offset in range(364, -1, -1)]
+    return [cell.get("data-date") for cell in heatmap_cells(context)] == dates
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
