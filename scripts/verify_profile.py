@@ -311,5 +311,21 @@ def annual_total(context):
     return stats_value(context, f"Contributions ({stats['year']})") == f"{stats['year_contribs']:,}"
 
 
+def card_text(context, card, x, y):
+    node = context.svg(card).find(f"s:text[@x='{x}'][@y='{y}']", NS)
+    return node.text if node is not None else None
+
+
+def window_days(context, length):
+    first = context.timestamp().date() - dt.timedelta(days=length - 1)
+    return [day for day in context.days() if day["date"] >= first.isoformat()]
+
+
+@check("recent.today: card total disagrees with the snapshot")
+def recent_today(context):
+    total = sum(day["contributionCount"] for day in window_days(context, 1))
+    return card_text(context, "recent-activity", 150, 84) == f"{total:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
