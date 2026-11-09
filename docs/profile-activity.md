@@ -241,3 +241,12 @@ publication. The audit confirms file consistency; live GitHub indexing and
 external streak-image delivery must still be verified separately. If an audit
 fails, inspect its named check, correct the source, regenerate, and rerun it.
 Do not repair a failure by editing contribution counts or disabling the check.
+
+### When image hashes match but counts disagree
+
+The offline audit compares the rendered statistics, recent activity, shared
+heatmap dates, and latest curve point with the same saved snapshot. A valid image
+hash only shows that the README points to those bytes. Check the named asset and
+snapshot field if their numbers disagree, then rerun the refresh to rebuild both
+together. The curve can include history older than the snapshot, so its total may
+exceed the sum of visible dates when the snapshot begins after the chart start.
