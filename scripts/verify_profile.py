@@ -431,5 +431,20 @@ def curve_total(context):
     return shown >= visible
 
 
+@check("curve.latest: endpoint disagrees with the latest contribution count")
+def curve_latest(context):
+    if context.timestamp().date() < CURVE_START:
+        return True
+    svg = context.svg("activity")
+    tick_nodes = svg.findall("s:text[@x='40']", NS)
+    peak = max((int(node.text) for node in tick_nodes), default=0)
+    if peak <= 0:
+        return False
+    _, y = curve_points(context)[-1]
+    latest = context.days()[-1]["contributionCount"]
+    expected_y = 235 - 180 * latest / peak
+    return abs(y - expected_y) <= 0.051
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
