@@ -408,5 +408,12 @@ def curve_bounds(context):
     return all(50 <= x <= 875 and 55 <= y <= 235 for x, y in points)
 
 
+@check("curve.dots: markers disagree with the plotted points")
+def curve_dots(context):
+    dots = context.svg("activity").findall("s:circle", NS)
+    positions = [(float(dot.get("cx")), float(dot.get("cy"))) for dot in dots]
+    return positions == curve_points(context)
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
