@@ -358,5 +358,17 @@ def heatmap_dates(context):
     return [cell.get("data-date") for cell in heatmap_cells(context)] == dates
 
 
+@check("heatmap.counts: a shared date shows an incorrect count")
+def heatmap_counts(context):
+    known = {day["date"]: day["contributionCount"] for day in context.days()}
+    for cell in heatmap_cells(context):
+        date = cell.get("data-date")
+        if date in known:
+            title = cell.find("s:title", NS)
+            if title is None or title.text != f"{date}: {known[date]} contributions":
+                return False
+    return True
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
