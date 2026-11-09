@@ -389,5 +389,24 @@ def refresh_label(context):
     return label.startswith(f"Updated {stamp} ·")
 
 
+CURVE_START = dt.date(2026, 9, 26)
+
+
+def curve_points(context):
+    line = context.svg("activity").find("s:polyline", NS)
+    if line is None:
+        return []
+    return [tuple(float(value) for value in point.split(","))
+            for point in line.get("points", "").split()]
+
+
+@check("curve.bounds: a point is missing or lies outside the plot")
+def curve_bounds(context):
+    points = curve_points(context)
+    if not points:
+        return context.timestamp().date() < CURVE_START
+    return all(50 <= x <= 875 and 55 <= y <= 235 for x, y in points)
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
