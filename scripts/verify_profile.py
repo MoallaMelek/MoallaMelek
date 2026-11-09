@@ -266,5 +266,20 @@ def rendered_streak(context):
                       "450": f"{metrics['current']:,}", "750": f"{metrics['longest']:,}"}
 
 
+def stats_value(context, label):
+    for group in context.svg("stats").findall("s:g", NS):
+        label_node = group.find("s:text[@class='label']", NS)
+        if label_node is not None and label_node.text == label + ":":
+            value = group.find("s:text[@class='value']", NS)
+            return value.text if value is not None else None
+    return None
+
+
+@check("stats.rendered.commits: SVG value disagrees with the snapshot")
+def commit_total(context):
+    stats = context.data["stats"]
+    return stats_value(context, "Total commits") == f"{stats['commits']:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
