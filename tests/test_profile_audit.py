@@ -139,3 +139,12 @@ class ProfileAuditTests(unittest.TestCase):
                 status = verify.main(["--root", str(root), "--json"])
             self.assertEqual(status, 1)
             self.assertFalse(json.loads(output.getvalue())["ok"])
+
+    def test_fresh_hashes_do_not_hide_a_stale_activity_snapshot(self):
+        with self.fixture() as root:
+            self.update_snapshot(root, lambda data: data["days"][-1].update(contributionCount=39))
+            issues = verify.audit(root, NOW)
+            for prefix in ("recent.today:", "heatmap.counts:", "curve.latest:"):
+                with self.subTest(check=prefix):
+                    self.assertTrue(any(issue.startswith(prefix) for issue in issues))
+            self.assertFalse(any(issue.startswith("readme.cache:") for issue in issues))
