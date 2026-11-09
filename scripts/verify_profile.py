@@ -327,5 +327,11 @@ def recent_today(context):
     return card_text(context, "recent-activity", 150, 84) == f"{total:,}"
 
 
+@check("recent.week: card total disagrees with the snapshot")
+def recent_week(context):
+    total = sum(day["contributionCount"] for day in window_days(context, 7))
+    return card_text(context, "recent-activity", 450, 84) == f"{total:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
