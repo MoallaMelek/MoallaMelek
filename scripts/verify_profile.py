@@ -452,5 +452,14 @@ def stats_account(context):
     return title is not None and title.text == f"{context.data['user']}'s GitHub Stats"
 
 
+@check("svg.motion: a generated card is missing reduced-motion styling")
+def reduced_motion(context):
+    for name in REQUIRED:
+        css = context.svg(name).findtext("s:style", "", NS)
+        if "prefers-reduced-motion: reduce" not in css or "animation: none" not in css:
+            return False
+    return True
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
