@@ -370,5 +370,17 @@ def heatmap_counts(context):
     return True
 
 
+@check("heatmap.inactive: zero-count cells must use the inactive color")
+def heatmap_inactive(context):
+    for cell in heatmap_cells(context):
+        title = cell.find("s:title", NS)
+        if title is None or title.text is None:
+            return False
+        inactive = title.text.endswith(": 0 contributions")
+        if (cell.get("fill") == "#161B22") != inactive:
+            return False
+    return True
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
