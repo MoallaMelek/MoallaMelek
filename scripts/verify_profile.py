@@ -281,5 +281,11 @@ def commit_total(context):
     return stats_value(context, "Total commits") == f"{stats['commits']:,}"
 
 
+@check("stats.rendered.stars: SVG value disagrees with the snapshot")
+def star_total(context):
+    stats = context.data["stats"]
+    return stats_value(context, "Total stars earned") == f"{stats['stars']:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
