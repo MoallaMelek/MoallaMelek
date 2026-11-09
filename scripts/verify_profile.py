@@ -287,5 +287,11 @@ def star_total(context):
     return stats_value(context, "Total stars earned") == f"{stats['stars']:,}"
 
 
+@check("stats.rendered.prs: SVG value disagrees with the snapshot")
+def pull_request_total(context):
+    stats = context.data["stats"]
+    return stats_value(context, "Pull requests") == f"{stats['prs']:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
