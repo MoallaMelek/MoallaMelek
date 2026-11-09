@@ -293,5 +293,11 @@ def pull_request_total(context):
     return stats_value(context, "Pull requests") == f"{stats['prs']:,}"
 
 
+@check("stats.rendered.issues: SVG value disagrees with the snapshot")
+def issue_total(context):
+    stats = context.data["stats"]
+    return stats_value(context, "Issues opened") == f"{stats['issues']:,}"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
