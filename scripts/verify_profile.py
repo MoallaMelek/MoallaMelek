@@ -339,5 +339,12 @@ def recent_month(context):
     return card_text(context, "recent-activity", 750, 84) == f"{total:,}"
 
 
+@check("recent.active: caption disagrees with the snapshot")
+def recent_active(context):
+    active = sum(day["contributionCount"] > 0 for day in window_days(context, 31))
+    caption = card_text(context, "recent-activity", 450, 145) or ""
+    return caption.startswith(f"{active} active days in the last 31 days")
+
+
 if __name__ == "__main__":
     raise SystemExit(main())
