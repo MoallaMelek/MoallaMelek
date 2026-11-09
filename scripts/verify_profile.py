@@ -382,5 +382,12 @@ def heatmap_inactive(context):
     return True
 
 
+@check("refresh.label: timestamp card disagrees with the snapshot")
+def refresh_label(context):
+    label = card_text(context, "activity-updated", 450, 26) or ""
+    stamp = context.timestamp().strftime("%Y-%m-%d %H:%M UTC")
+    return label.startswith(f"Updated {stamp} ·")
+
+
 if __name__ == "__main__":
     raise SystemExit(main())

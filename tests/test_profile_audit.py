@@ -59,7 +59,8 @@ class ProfileAuditTests(unittest.TestCase):
                         "heatmap": cards.heatmap_card(days, NOW.date()),
                         "streak": cards.streak_card(days),
                         "recent-activity": cards.recent_activity_card(days),
-                        "activity-updated": cards.frame(900, 42, "")}
+                        "activity-updated": cards.frame(
+                            900, 42, '<text x="450" y="26">Updated 2026-11-08 12:00 UTC · GitHub contribution calendar</text>')}
             for name, svg in svgs.items():
                 (out / f"{name}.svg").write_text(svg, encoding="utf-8")
             readme = "\n".join(
