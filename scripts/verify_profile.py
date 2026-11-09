@@ -446,5 +446,11 @@ def curve_latest(context):
     return abs(y - expected_y) <= 0.051
 
 
+@check("stats.account: card title disagrees with the snapshot account")
+def stats_account(context):
+    title = context.svg("stats").find("s:text[@class='title']", NS)
+    return title is not None and title.text == f"{context.data['user']}'s GitHub Stats"
+
+
 if __name__ == "__main__":
     raise SystemExit(main())

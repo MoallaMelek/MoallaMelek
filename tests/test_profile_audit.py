@@ -48,7 +48,7 @@ class ProfileAuditTests(unittest.TestCase):
                     {"date": "2026-11-08", "contributionCount": 40}]
             stats = {"stars": 2, "commits": 100, "year": 2026,
                      "year_contribs": 100, "prs": 3, "issues": 4, "repos": 5}
-            snapshot = {"updated_at": NOW.isoformat(), "user": "MoallaMelek",
+            snapshot = {"updated_at": NOW.isoformat(), "user": cards.USER,
                         "stats": stats, "days": days,
                         "streak": cards.streak_metrics(days, NOW.date())}
             (out / "activity-data.json").write_text(json.dumps(snapshot), encoding="utf-8")
