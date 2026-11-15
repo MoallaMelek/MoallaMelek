@@ -7,7 +7,7 @@
 [![Portfolio — visit Melek Moalla’s website](https://img.shields.io/badge/Portfolio-Visit%20Website-2563EB?style=for-the-badge&logo=vercel&logoColor=white)](https://melek-moalla.vercel.app)
 [![Download Melek Moalla’s CV as PDF](https://img.shields.io/badge/CV-Download%20PDF-2563EB?style=for-the-badge)](https://melek-moalla.vercel.app/Melek-Moalla-CV.pdf)
 [![LinkedIn — connect with Melek Moalla](https://img.shields.io/badge/LinkedIn-Melek%20Moalla-0A66C2?style=for-the-badge)](https://www.linkedin.com/in/melek-moalla-14a5a4357)
-[![Profile views — hourly snapshot](assets/profile-views.svg?v=57378922c11d)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
+[![Profile views — hourly snapshot](assets/profile-views.svg?v=ca374a6669e8)](https://github.com/MoallaMelek "Profile views — refreshed hourly")
 [![GitHub followers — view follower list](https://img.shields.io/github/followers/MoallaMelek?style=for-the-badge&color=111827&labelColor=0D1117)](https://github.com/MoallaMelek?tab=followers)
 [![AI engineering student — read about me](https://img.shields.io/badge/Role-AI%20Engineering%20Student-2563EB?style=for-the-badge)](#about-me)
 [![Full-stack AI developer — explore projects](https://img.shields.io/badge/Specialty-Full--Stack%20AI-0F172A?style=for-the-badge)](#featured-projects)
@@ -158,17 +158,17 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 [Live contributions](https://github.com/MoallaMelek?tab=overview) · [Refresh workflow](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml) · [Activity snapshot (JSON)](assets/activity-data.json)
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/stats.svg?v=f62d29b766f8" alt="GitHub stats — open repositories" /></a>
+  <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/stats.svg?v=8be0d9e185d3" alt="GitHub stats — open repositories" /></a>
   <a href="https://github.com/MoallaMelek?tab=repositories"><img height="180" src="assets/top-langs.svg?v=e0fade710e82" alt="Most used languages — explore repositories" /></a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=c153db3a53aa" alt="GitHub contribution streak — open live calendar" /></a>
+  <a href="https://github.com/MoallaMelek?tab=overview"><img height="180" src="https://streak-stats.demolab.com?user=MoallaMelek&theme=tokyonight&hide_border=true&background=0D1117&ring=58A6FF&fire=7EE787&currStreakLabel=E6EDF3&v=c66c9d1b0e2a" alt="GitHub contribution streak — open live calendar" /></a>
 </div>
 
 <div align="center">
-  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=565b734654d4" alt="Contribution activity graph — open the live contribution calendar" /></a>
-  <img width="100%" src="assets/activity-updated.svg?v=48181fd01beb" alt="Timestamp of the most recent contribution activity snapshot" />
+  <a href="https://github.com/MoallaMelek?tab=overview"><img width="100%" src="assets/activity.svg?v=df40248f9195" alt="Contribution activity graph — open the live contribution calendar" /></a>
+  <img width="100%" src="assets/activity-updated.svg?v=7a812146cce5" alt="Timestamp of the most recent contribution activity snapshot" />
 </div>
 
 [![Profile cards refresh status](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml/badge.svg)](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml)
