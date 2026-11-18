@@ -15,7 +15,7 @@
 <text x="150" y="113" text-anchor="middle" class="label">Today · UTC</text>
 <text x="450" y="84" text-anchor="middle" class="value" style="font-size:30px">14</text>
 <text x="450" y="113" text-anchor="middle" class="label">Last 7 days</text>
-<text x="750" y="84" text-anchor="middle" class="value" style="font-size:30px">310</text>
+<text x="750" y="84" text-anchor="middle" class="value" style="font-size:30px">293</text>
 <text x="750" y="113" text-anchor="middle" class="label">Last 31 days</text>
-<text x="450" y="145" text-anchor="middle" class="muted">20 active days in the last 31 days · contributions, not only commits</text>
+<text x="450" y="145" text-anchor="middle" class="muted">19 active days in the last 31 days · contributions, not only commits</text>
 </svg>
