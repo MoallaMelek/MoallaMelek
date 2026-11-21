@@ -153,6 +153,8 @@ Five completed courses across **deep learning**, **generative AI**, **agentic AI
 ---
 <!-- certifications:end -->
 
+<!-- Activity card refresh: 2026-11-21; owner-requested 30-commit batch. -->
+
 ## GitHub Analytics
 
 [Live contributions](https://github.com/MoallaMelek?tab=overview) · [Refresh workflow](https://github.com/MoallaMelek/MoallaMelek/actions/workflows/cards.yml) · [Activity snapshot (JSON)](assets/activity-data.json)
