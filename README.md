@@ -43,6 +43,7 @@ I care about systems that are technically credible *and* actually usable: clean 
 ## Featured Projects
 
 <div align="center">
+  <a href="https://github.com/MoallaMelek/agent-crash-lab"><img width="49%" src="assets/pin-agent-crash-lab.svg?v=eec11bf3d514" alt="Agent Crash Lab — SIGKILL crash matrix for side-effecting Pydantic AI tools" /></a>
   <a href="https://github.com/MoallaMelek/Reward-Goblin"><img width="49%" src="assets/pin-Reward-Goblin.svg?v=c4f4839bd630" alt="Reward Goblin — PPO reward-hacking experiments" /></a>
   <a href="https://github.com/MoallaMelek/Hydra-Agent-Orchestrator"><img width="49%" src="assets/pin-Hydra-Agent-Orchestrator.svg?v=91c1f766a2c9" alt="Hydra — Claude Code and Codex CLI agent orchestration" /></a>
   <a href="https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon"><img width="49%" src="assets/pin-Reinforcement-Learning-Memory-Dungeon.svg?v=7174ab7b9be1" alt="Memory Dungeon — reinforcement learning in partially observable environments" /></a>
@@ -59,6 +60,7 @@ I care about systems that are technically credible *and* actually usable: clean 
 
 | Project | What it does | Stack |
 | --- | --- | --- |
+| [agent-crash-lab](https://github.com/MoallaMelek/agent-crash-lab) | Reproducible SIGKILL crash matrix for Pydantic AI agents: measures which persistence, resume and idempotency-key choices duplicate, lose or strand a payment-like side effect, with a recorded-evidence viewer | Python, Pydantic AI, SQLite, pytest, GitHub Actions |
 | [Reward-Goblin](https://github.com/MoallaMelek/Reward-Goblin) | Reward hacking made visible: real PPO agents exploit misspecified reward functions, measured against a separate true objective across seeds and unseen layouts | Python, PyTorch, Stable-Baselines3, Gymnasium, Pymunk, FastAPI |
 | [Hydra-Agent-Orchestrator](https://github.com/MoallaMelek/Hydra-Agent-Orchestrator) | Cross-platform desktop app that runs, monitors and coordinates Claude Code and OpenAI Codex CLI agents in parallel | TypeScript, Node.js, MCP |
 | [Reinforcement-Learning-Memory-Dungeon](https://github.com/MoallaMelek/Reinforcement-Learning-Memory-Dungeon) | PPO lab comparing feed-forward, short-history and recurrent agents in partially observable dungeons, with memory-deletion experiments | Python, PyTorch, Streamlit |
